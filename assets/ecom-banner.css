@@ -262,7 +262,8 @@
     }
     .ecom-banner-img
     {
-        min-height: 500px;
+        min-height: auto;
+        max-height: 500px;
     }
     .ecom-banner-mobile-content
     {
