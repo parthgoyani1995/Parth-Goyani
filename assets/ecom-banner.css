@@ -16,7 +16,7 @@
 .menu-burger
 {
     position: absolute;
-    left: 15px;
+    left: 5px;
     top: 50%;
     transform: translateY(-50%);
     padding: 10px 10px 8px;
