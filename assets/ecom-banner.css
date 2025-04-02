@@ -2,7 +2,7 @@
 .ecom-banner-section {
     background-size: cover;
     background-position: center;
-    padding: 0px 0;
+    padding: 0 0;
 }
 
 .ecom-container {
@@ -11,7 +11,7 @@
     padding: 0 20px;
 }
 
-.ecom-banner-announcement {
+.ecom-banner-announcement-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-around;
