@@ -53,7 +53,7 @@
 
 .ecom-banner-text-wrapper.active
 {
-
+    display: block;
 }
 
 .ecom-banner-text {
