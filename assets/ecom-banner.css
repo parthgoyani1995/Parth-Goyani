@@ -54,6 +54,14 @@
 {
     position: relative;
 }
+.ecom-banner-content
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+}
 
 .ecom-banner-image-area img
 {
