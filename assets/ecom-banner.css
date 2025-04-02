@@ -59,8 +59,9 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background: #FFFFFF;
-    color: #fff;
+    background: #fff;
+    padding: 50px;
+    max-width: 600px;
 }
 
 .ecom-banner-image-area img
