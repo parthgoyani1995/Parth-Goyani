@@ -250,6 +250,10 @@
     .ecom-banner-announcement .ecom-container {
         padding: 0;
     }
+    .ecom-banner-announcement
+    {
+        position: relative;
+    }
 
 
     .ecom-banner-announcement-wrapper {
