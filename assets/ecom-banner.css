@@ -254,7 +254,7 @@
     .ecom-banner-announcement-wrapper
     {
         display: block;
-        justify-content: center;
+        text-align: center;
         padding: 22px 0;
     }
 
