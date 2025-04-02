@@ -15,6 +15,11 @@
     .ecom-banner-button:hover {
         background-color: {{ section.settings.button_hover_color }};
         color: #FFF;
+      /* background effect should be left to right on hover */
+        background-size: 200% 100%;
+        background-position: right center;
+        transition: all 0.5s ease;
+      
     }
 
     .ecom-banner-announcement {
