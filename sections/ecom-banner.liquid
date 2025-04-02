@@ -28,13 +28,13 @@
         background-color: {{ section.settings.announcement_background_color }};
     }
 
-    .ecom-banner-img
-    {
+    .ecom-banner-img {
         min-height: {{ section.settings.banner_image_height }}px;
         width: 100%;
         object-fit: cover;
         object-position: center;
     }
+
     /*  Banner content area css  */
     .ecom-banner-content {
         padding: {{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }}px {{ section.settings.padding_left }}px;
@@ -52,8 +52,7 @@
         color: #000000;
     }
 
-    .ecom-banner-bottom-announcement
-    {
+    .ecom-banner-bottom-announcement {
         background-color: {{ section.settings.bottom_announcement_background_color }};
     }
 
@@ -64,30 +63,32 @@
 	<div class="ecom-banner-announcement">
 		<div class="ecom-container">
 			<div class="ecom-banner-announcement-wrapper">
-              <div class="menu-burger desktop-hide">
-                <svg width="20" height="13" viewBox="0 0 20 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 6.5H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M1 1.5H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M1 11.5H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
+				<div class="menu-burger desktop-hide">
+					<svg width="20" height="13" viewBox="0 0 20 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1 6.5H19" stroke="black" stroke-width="2" stroke-linecap="round"
+						      stroke-linejoin="round"/>
+						<path d="M1 1.5H19" stroke="black" stroke-width="2" stroke-linecap="round"
+						      stroke-linejoin="round"/>
+						<path d="M1 11.5H19" stroke="black" stroke-width="2" stroke-linecap="round"
+						      stroke-linejoin="round"/>
+					</svg>
+				</div>
 				{% if section.settings.announcement_logo %}
 					<img src="{{ section.settings.announcement_logo | img_url: '300x' }}" alt="Announcement Logo"
 					     class="ecom-banner-logo">
 				{% endif %}
-              <div class="ecom-banner-text-wrapper mobile-hide">
-				<p class="ecom-banner-text">{{ section.settings.announcement_text }}</p>
-				<a href="{{ section.settings.button_link }}" class="ecom-banner-button">
-					{{ section.settings.button_text }}
-					{% render 'right-arrow-icon' %}
-				</a>
-              </div>
+				<div class="ecom-banner-text-wrapper mobile-hide">
+					<p class="ecom-banner-text">{{ section.settings.announcement_text }}</p>
+					<a href="{{ section.settings.button_link }}" class="ecom-banner-button">
+						{{ section.settings.button_text }}
+						{% render 'right-arrow-icon' %}
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="ecom-banner-image-area">
 		<img src="{{ section.settings.banner_image | img_url: '2048x' }}" alt="Banner Image" class="ecom-banner-img">
-
 		<div class="ecom-banner-content placement-{{ section.settings.content_placement }}">
 			<h1 class="ecom-banner-title">{{ section.settings.content_title }}</h1>
 			<p class="ecom-banner-subtitle">{{ section.settings.content_subtitle }}</p>
@@ -307,7 +308,6 @@
         }
       ]
     },
-
     {
       "type": "header",
       "content": "Bottom announcement bar"
