@@ -1,12 +1,103 @@
-{{ 'ecom-banner.css' | asset_url | stylesheet_tag }}
+{% comment %}{{ 'ecom-banner.css' | asset_url | stylesheet_tag }}{% endcomment %}
+<style>
+    .ecom-banner-section {
+        background-image: url({{ section.settings.banner_image | img_url: '2048x' }});
+        background-size: cover;
+        background-position: center;
+        padding: 20px 0;
+    }
+
+    .ecom-banner-content {
+        text-align: center;
+        color: #fff;
+    }
+
+    .ecom-banner-logo {
+        max-width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .ecom-banner-text {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .ecom-banner-button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .ecom-banner-button:hover {
+        background-color: {{ section.settings.button_hover_color }};
+        color: {{ section.settings.button_color }};
+    }
+
+    .ecom-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    @media (max-width: 768px) {
+        .ecom-banner-section {
+            padding: 10px 0;
+        }
+
+        .ecom-banner-text {
+            font-size: 16px;
+        }
+
+        .ecom-banner-button {
+            font-size: 14px;
+            padding: 8px 16px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .ecom-banner-logo {
+            max-width: 80px;
+        }
+
+        .ecom-banner-text {
+            font-size: 14px;
+        }
+
+        .ecom-banner-button {
+            font-size: 12px;
+            padding: 6px 12px;
+        }
+    }
+
+    @media (max-width: 320px) {
+        .ecom-banner-logo {
+            max-width: 60px;
+        }
+
+        .ecom-banner-text {
+            font-size: 12px;
+        }
+
+        .ecom-banner-button {
+            font-size: 10px;
+            padding: 4px 8px;
+        }
+    }
+
+</style>
 <section class="ecom-banner-section">
 	<div class="ecom-container">
 		<div class="ecom-banner-content">
 			{% if section.settings.announcement_logo %}
-				<img src="{{ section.settings.announcement_logo | img_url: '300x' }}" alt="Announcement Logo" class="ecom-banner-logo">
+				<img src="{{ section.settings.announcement_logo | img_url: '300x' }}" alt="Announcement Logo"
+				     class="ecom-banner-logo">
 			{% endif %}
 			<p class="ecom-banner-text">{{ section.settings.announcement_text }}</p>
-			<a href="{{ section.settings.button_link }}" class="ecom-banner-button" style="background-color: {{ section.settings.button_color }}; color: {{ section.settings.button_hover_color }};">
+			<a href="{{ section.settings.button_link }}" class="ecom-banner-button"
+			   style="background-color: {{ section.settings.button_color }}; color: {{ section.settings.button_hover_color }};">
 				{{ section.settings.button_text }}
 			</a>
 		</div>
