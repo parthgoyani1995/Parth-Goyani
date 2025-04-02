@@ -72,6 +72,11 @@
     max-width: 100%;
     display: block;
 }
+
+.ecom-banner-content .ecom-banner-title
+{
+    font-size: ;
+}
 @media (max-width: 768px) {
     .ecom-banner-section {
         padding: 10px 0;
