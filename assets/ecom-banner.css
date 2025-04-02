@@ -52,9 +52,8 @@
 }
 
 .ecom-banner-button:hover,
-.ecom-banner-content-button:hover
-{
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.ecom-banner-content-button:hover {
+    box-shadow: 1px 2px 3px #0003, 0 0 4px #00000030;
 }
 
 /* Banner image CSS */
@@ -95,17 +94,17 @@
 .ecom-banner-content .ecom-banner-description {
     margin-bottom: 50px;
 }
-.ecom-banner-content .ecom-banner-content-button
-{
+
+.ecom-banner-content .ecom-banner-content-button {
     color: #FFFFFF;
     width: fit-content;
 }
-.ecom-banner-content .ecom-banner-content-button svg path
-{
+
+.ecom-banner-content .ecom-banner-content-button svg path {
     fill: #fff;
 }
-.ecom-banner-content .ecom-banner-content-button:hover svg path
-{
+
+.ecom-banner-content .ecom-banner-content-button:hover svg path {
     fill: #000;
 }
 
