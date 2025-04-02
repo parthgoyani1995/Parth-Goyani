@@ -57,7 +57,6 @@
         background-color: {{ section.settings.bottom_announcement_background_color }};
     }
 
-  /*   Content placement CSS */
 
 
 </style>
@@ -81,7 +80,7 @@
 	<div class="ecom-banner-image-area">
 		<img src="{{ section.settings.banner_image | img_url: '2048x' }}" alt="Banner Image" class="ecom-banner-img">
 
-		<div class="ecom-banner-content">
+		<div class="ecom-banner-content placement-{{ section.settings.content_placement }}">
 			<h1 class="ecom-banner-title">{{ section.settings.content_title }}</h1>
 			<p class="ecom-banner-subtitle">{{ section.settings.content_subtitle }}</p>
 			<div class="ecom-banner-description">
