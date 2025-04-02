@@ -256,6 +256,7 @@
         display: block;
         text-align: center;
         padding: 22px 0;
+        line-height: 1;
     }
 
     .ecom-banner-text-wrapper
