@@ -79,6 +79,16 @@
     margin-bottom: 40px;
     margin-top: 0;
 }
+
+.ecom-banner-content .ecom-banner-subtitle,
+.ecom-banner-content .ecom-banner-description *
+{
+    font-size: 20px;
+    margin-bottom: 00px;
+}
+
+
+/* Responsive css */
 @media (max-width: 768px) {
     .ecom-banner-section {
         padding: 10px 0;
