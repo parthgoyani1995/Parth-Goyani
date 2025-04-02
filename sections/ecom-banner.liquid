@@ -4,9 +4,6 @@
         max-width: {{ section.settings.container_width }}px;
     }
 
-    .ecom-banner-section {
-        background-image: url({{ section.settings.banner_image | img_url: '2048x' }});
-    }
     .ecom-banner-button
     {
         background: linear-gradient(to right, {{ section.settings.button_hover_color }} 50%, {{ section.settings.button_background_color }} 50%);
@@ -49,6 +46,11 @@
 			</div>
 		</div>
 	</div>
+    <div class=" ecom-banner-image">
+        <div class="ecom-container">
+            <img src="{{ section.settings.banner_image | img_url: '2048x' }}" alt="Banner Image" class="ecom-banner-img">
+        </div>
+    </div>
 </section>
 
 {% schema %}
