@@ -64,6 +64,13 @@
 	<div class="ecom-banner-announcement">
 		<div class="ecom-container">
 			<div class="ecom-banner-announcement-wrapper">
+              <div class="menu-burger desktop-hide">
+                <svg width="20" height="13" viewBox="0 0 20 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 6.5H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1 1.5H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1 11.5H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
 				{% if section.settings.announcement_logo %}
 					<img src="{{ section.settings.announcement_logo | img_url: '300x' }}" alt="Announcement Logo"
 					     class="ecom-banner-logo">
