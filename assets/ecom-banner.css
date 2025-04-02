@@ -277,27 +277,9 @@
         margin-bottom: 20px;
     }
 
-    .ecom-banner-button, .ecom-banner-content-button {
-        margin: 0 auto;
-        width: fit-content;
-    }
-
-    .ecom-banner-content .ecom-banner-title {
-        font-size: 50px;
-    }
-
-    .ecom-banner-content .ecom-banner-subtitle,
-    .ecom-banner-content .ecom-banner-description * {
-        font-size: 16px;
-    }
-
-    .ecom-banner-content .ecom-banner-description {
-        margin-bottom: 30px;
-    }
-
-    .ecom-banner-content .ecom-banner-content-button {
-        font-size: 16px;
-        padding: 10px 20px;
+    .ecom-banner-content
+    {
+        background: transparent;
     }
 }
 
