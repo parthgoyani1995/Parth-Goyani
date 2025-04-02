@@ -281,7 +281,7 @@
     {
         background: transparent;
         left: 50% !important;
-        bottom: 100px !important;
+        bottom: 50px !important;
         transform: translateX(-50%);
     }
 }
