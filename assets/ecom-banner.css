@@ -99,6 +99,10 @@
 {
     fill: #fff;
 }
+.ecom-banner-content .ecom-banner-content-button:hover svg path
+{
+    fill: #000;
+}
 
 
 /* Responsive css */
