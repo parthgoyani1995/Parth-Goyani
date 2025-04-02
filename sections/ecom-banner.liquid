@@ -4,23 +4,23 @@
         max-width: {{ section.settings.container_width }}px;
     }
 
-    .ecom-banner-button
-    {
+    .ecom-banner-button {
         background: linear-gradient(to right, {{ section.settings.button_hover_color }} 50%, {{ section.settings.button_background_color }} 50%);
         background-size: 200% 100%;
         background-position: right bottom;
         transition: all 0.3s ease-out;
     }
+
     .ecom-banner-button:hover {
         background-position: left bottom;
         color: #FFFFFF;
     }
-    .ecom-banner-button svg path
-    {
+
+    .ecom-banner-button svg path {
         transition: all 0.3s ease-in-out;
     }
-    .ecom-banner-button:hover svg path
-    {
+
+    .ecom-banner-button:hover svg path {
         fill: #FFF;
     }
 
@@ -41,14 +41,27 @@
 				<p class="ecom-banner-text">{{ section.settings.announcement_text }}</p>
 				<a href="{{ section.settings.button_link }}" class="ecom-banner-button">
 					{{ section.settings.button_text }}
-                    {% render 'right-arrow-icon' %}
+					{% render 'right-arrow-icon' %}
 				</a>
 			</div>
 		</div>
 	</div>
-    <div class="ecom-banner-image-area">
-            <img src="{{ section.settings.banner_image | img_url: '2048x' }}" alt="Banner Image" class="ecom-banner-img">
-    </div>
+	<div class="ecom-banner-image-area">
+		<img src="{{ section.settings.banner_image | img_url: '2048x' }}" alt="Banner Image" class="ecom-banner-img">
+		<div class="ecom-container">
+			<div class="ecom-banner-content">
+				<h2 class="ecom-banner-title">{{ section.settings.content_title }}</h2>
+				<h3 class="ecom-banner-subtitle">{{ section.settings.content_subtitle }}</h3>
+				<div class="ecom-banner-description">
+					{{ section.settings.content_description }}
+				</div>
+				<a href="{{ section.settings.content_button_link }}" class="ecom-banner-button">
+					{{ section.settings.content_button_text }}
+					{% render 'right-arrow-icon' %}
+				</a>
+			</div>
+		</div>
+	</div>
 </section>
 
 {% schema %}
