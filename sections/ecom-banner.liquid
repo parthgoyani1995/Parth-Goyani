@@ -24,9 +24,13 @@
         fill: #FFF;
     }
 
-
     .ecom-banner-announcement {
         background-color: {{ section.settings.announcement_background_color }};
+    }
+
+    /*  Banner content area css  */
+    .ecom-banner-image-area {
+        padding: {{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }}px {{ section.settings.padding_left }}px;
     }
 </style>
 
@@ -170,6 +174,42 @@
       "id": "content_button_hover_color",
       "label": "Content Button Hover Color",
       "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "default": 50,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "default": 50,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "label": "Padding Left",
+      "default": 20,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "label": "Padding Right",
+      "default": 20,
+      "min": 0,
+      "max": 100,
+      "step": 5
     }
   ],
   "presets": [
