@@ -11,16 +11,16 @@
     margin: 0 auto;
     padding: 0 20px;
 }
-.menu-burger
-{
+
+.menu-burger {
     position: absolute;
     left: 5px;
     top: 33px;
     transform: translateY(-50%);
     padding: 10px 10px 8px;
 }
-.close-menu
-{
+
+.close-menu {
     display: none;
 }
 
@@ -43,16 +43,15 @@
 .ecom-banner-logo {
     max-width: 200px;
 }
-.ecom-banner-text-wrapper
-{
+
+.ecom-banner-text-wrapper {
     display: flex;
     flex-basis: 64.66%;
     justify-content: space-between;
     align-items: center;
 }
 
-.ecom-banner-text-wrapper.active
-{
+.ecom-banner-text-wrapper.active {
     display: block;
     box-shadow: 0 -2px 4px #00000026;
     margin-top: 22px;
@@ -199,8 +198,7 @@
     font-size: 20px;
 }
 
-.desktop-hide
-{
+.desktop-hide {
     display: none;
 }
 
@@ -224,26 +222,26 @@
         font-size: 18px;
         padding: 10px 25px;
     }
+
     .ecom-banner-button,
-    .ecom-banner-content-button
-    {
+    .ecom-banner-content-button {
         padding: 10px 20px 10px 20px;
         font-size: 15px;
     }
-    .ecom-banner-text-wrapper
-    {
+
+    .ecom-banner-text-wrapper {
         flex-basis: 66.66%;
     }
-    .ecom-banner-text
-    {
+
+    .ecom-banner-text {
         font-size: 16px;
     }
 
-    .ecom-banner-logo
-    {
+    .ecom-banner-logo {
         max-width: 150px;
     }
 }
+
 @media (max-width: 768px) {
 
     .mobile-hide {
@@ -254,35 +252,31 @@
         display: block;
     }
 
-    .ecom-banner-announcement .ecom-container
-    {
+    .ecom-banner-announcement .ecom-container {
         padding: 0;
     }
 
 
-    .ecom-banner-announcement-wrapper
-    {
+    .ecom-banner-announcement-wrapper {
         display: block;
         text-align: center;
         padding: 22px 0;
         line-height: 1;
     }
 
-    .ecom-banner-text-wrapper
-    {
+    .ecom-banner-text-wrapper {
         text-align: center;
     }
 
-    .ecom-banner-text
-    {
+    .ecom-banner-text {
         margin-bottom: 20px;
     }
 
-    .ecom-banner-button, .ecom-banner-content-button
-    {
-        margin:0 auto;
+    .ecom-banner-button, .ecom-banner-content-button {
+        margin: 0 auto;
         width: fit-content;
     }
+
     .ecom-banner-content .ecom-banner-title {
         font-size: 50px;
     }
@@ -301,6 +295,7 @@
         padding: 10px 20px;
     }
 }
+
 @media (max-width: 480px) {
     .ecom-banner-content .ecom-banner-title {
         font-size: 30px;
@@ -320,6 +315,7 @@
         padding: 10px 15px;
     }
 }
+
 @media (max-width: 320px) {
     .ecom-banner-content .ecom-banner-title {
         font-size: 24px;
