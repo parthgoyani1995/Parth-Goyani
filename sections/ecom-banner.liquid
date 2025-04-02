@@ -1,0 +1,372 @@
+{{ 'ecom-banner.css' | asset_url | stylesheet_tag }}
+<style>
+    .ecom-container {
+        max-width: {{ section.settings.container_width }}px;
+    }
+
+    .ecom-banner-button {
+        background: linear-gradient(to right, {{ section.settings.button_hover_color }} 50%, {{ section.settings.button_background_color }} 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all 0.3s ease-out;
+    }
+
+    .ecom-banner-button:hover {
+        background-position: left bottom;
+        color: #FFFFFF;
+    }
+
+    .ecom-banner-button svg path {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .ecom-banner-button:hover svg path {
+        fill: #FFF;
+    }
+
+    .ecom-banner-announcement {
+        background-color: {{ section.settings.announcement_background_color }};
+    }
+
+    .ecom-banner-img {
+        height: {{ section.settings.banner_image_height }}px;
+
+    }
+
+    /*  Banner content area css  */
+    .ecom-banner-content {
+        padding: {{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }}px {{ section.settings.padding_left }}px;
+    }
+
+    .ecom-banner-content-button {
+        background: linear-gradient(to right, {{ section.settings.content_button_hover_color }} 50%, {{ section.settings.content_button_background_color }} 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all 0.3s ease-out;
+    }
+
+    .ecom-banner-content-button:hover {
+        background-position: left bottom;
+        color: #000000;
+    }
+
+    .ecom-banner-bottom-announcement {
+        background-color: {{ section.settings.bottom_announcement_background_color }};
+    }
+
+
+</style>
+
+<section class="ecom-banner-section">
+	<div class="ecom-banner-announcement">
+		<div class="ecom-container">
+			<div class="ecom-banner-announcement-wrapper">
+				<div class="menu-burger desktop-hide">
+                  <span class="open-menu">
+					<svg width="20" height="13" viewBox="0 0 20 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1 6.5H19" stroke="black" stroke-width="2" stroke-linecap="round"
+						      stroke-linejoin="round"/>
+						<path d="M1 1.5H19" stroke="black" stroke-width="2" stroke-linecap="round"
+						      stroke-linejoin="round"/>
+						<path d="M1 11.5H19" stroke="black" stroke-width="2" stroke-linecap="round"
+						      stroke-linejoin="round"/>
+					</svg>
+                    </span>
+					<span class="close-menu">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13.9997L13.7279 1.27177" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 1.00031L13.7279 13.7282" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+				</div>
+				{% if section.settings.announcement_logo %}
+					<img src="{{ section.settings.announcement_logo | img_url: '300x' }}" alt="Announcement Logo"
+					     class="ecom-banner-logo">
+				{% endif %}
+				<div class="ecom-banner-text-wrapper mobile-hide">
+					<p class="ecom-banner-text">{{ section.settings.announcement_text }}</p>
+					<a href="{{ section.settings.button_link }}" class="ecom-banner-button">
+						{{ section.settings.button_text }}
+						{% render 'right-arrow-icon' %}
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ecom-banner-image-area">
+        <div class="ecom-banner-mobile-content desktop-hide">
+            <h1 class="ecom-banner-title">{{ section.settings.content_title }}</h1>
+            <p class="ecom-banner-subtitle ">{{ section.settings.content_subtitle }}</p>
+        </div>
+		<img src="{{ section.settings.banner_image | img_url: '2048x' }}" alt="Banner Image" class="ecom-banner-img">
+		<div class="ecom-banner-content placement-{{ section.settings.content_placement }}">
+			<h1 class="ecom-banner-title mobile-hide">{{ section.settings.content_title }}</h1>
+			<p class="ecom-banner-subtitle mobile-hide">{{ section.settings.content_subtitle }}</p>
+			<div class="ecom-banner-description mobile-hide">
+				{{ section.settings.content_description }}
+			</div>
+			<a href="{{ section.settings.content_button_link }}" class="ecom-banner-content-button">
+				{{ section.settings.content_button_text }}
+				{% render 'right-arrow-icon' %}
+			</a>
+		</div>
+
+		<div class="ecom-banner-bottom-announcement">
+			<div class="ecom-banner-bottom-text">{{ section.settings.bottom_announcement_text }}</div>
+		</div>
+	</div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function ()
+    {
+        // menu-burger click open close .ecom-banner-text-wrapper
+        const menuBurger = document.querySelector('.menu-burger');
+        const ecomBannerTextWrapper = document.querySelector('.ecom-banner-text-wrapper');
+        const openMenu = document.querySelector('.open-menu');
+        const closeMenu = document.querySelector('.close-menu');
+        menuBurger.addEventListener('click', function ()
+        {
+            if (ecomBannerTextWrapper.classList.contains('active'))
+            {
+                ecomBannerTextWrapper.classList.remove('active');
+                openMenu.style.display = 'block';
+                closeMenu.style.display = 'none';
+            }
+            else
+            {
+                ecomBannerTextWrapper.classList.add('active');
+                openMenu.style.display = 'none';
+                closeMenu.style.display = 'block';
+            }
+        });
+
+    });
+
+</script>
+{% schema %}
+{
+  "name": "Ecom Banner",
+  "settings": [
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Container Width",
+      "default": 1200,
+      "min": 1000,
+      "max": 1900,
+      "step": 50
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "range",
+      "id": "banner_image_height",
+      "label": "Banner Image Height",
+      "default": 800,
+      "min": 500,
+      "max": 2000,
+      "step": 50,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Banner announcement bar"
+    },
+    {
+      "type": "color",
+      "id": "announcement_background_color",
+      "label": "Announcement Background Color",
+      "default": "#F5F5F5"
+    },
+    {
+      "type": "image_picker",
+      "id": "announcement_logo",
+      "label": "Announcement Logo"
+    },
+    {
+      "type": "text",
+      "id": "announcement_text",
+      "label": "Announcement Text",
+      "default": "Free shipping on orders over $50"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button Background Color",
+      "default": "#fff544"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button Hover Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Banner Content"
+    },
+    {
+      "type": "text",
+      "id": "content_title",
+      "label": "Content Title",
+      "default": "Welcome to our store!"
+    },
+    {
+      "type": "text",
+      "id": "content_subtitle",
+      "label": "Content Subtitle",
+      "default": "Discover our latest products"
+    },
+    {
+      "type": "richtext",
+      "id": "content_description",
+      "label": "Content Description",
+      "default": "<p>Shop the latest trends and styles.</p>"
+    },
+    {
+      "type": "text",
+      "id": "content_button_text",
+      "label": "Content Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "content_button_link",
+      "label": "Content Button Link"
+    },
+    {
+      "type": "color",
+      "id": "content_button_background_color",
+      "label": "Content Button Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "content_button_hover_color",
+      "label": "Content Button Hover Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "default": 50,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "default": 50,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "label": "Padding Left",
+      "default": 20,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "label": "Padding Right",
+      "default": 20,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "content_placement",
+      "label": "Content Placement",
+      "default": "bottom-left",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "Top Left"
+        },
+        {
+          "value": "top-center",
+          "label": "Top Center"
+        },
+        {
+          "value": "top-right",
+          "label": "Top Right"
+        },
+        {
+          "value": "middle-left",
+          "label": "Middle Left"
+        },
+        {
+          "value": "middle-center",
+          "label": "Middle Center"
+        },
+        {
+          "value": "middle-right",
+          "label": "Middle Right"
+        },
+        {
+          "value": "bottom-left",
+          "label": "Bottom Left"
+        },
+        {
+          "value": "bottom-center",
+          "label": "Bottom Center"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Bottom Right"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Bottom announcement bar"
+    },
+    {
+      "type": "richtext",
+      "id": "bottom_announcement_text",
+      "label": "Bottom Announcement Text",
+      "default": "<p>Free shipping on orders over $50</p>"
+    },
+    {
+      "type": "color",
+      "id": "bottom_announcement_background_color",
+      "label": "Bottom Announcement Background Color",
+      "default": "#F5F5F5"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ecom Banner",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
