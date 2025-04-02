@@ -255,7 +255,11 @@
         position: relative;
     }
 
-
+    .ecom-banner-button
+    {
+        width: fit-content;
+        margin: 0 auto;
+    }
     .ecom-banner-announcement-wrapper {
         display: block;
         text-align: center;
