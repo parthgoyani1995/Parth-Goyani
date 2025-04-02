@@ -1,9 +1,8 @@
 
-.ecom-banner-announcement {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px;
+.ecom-banner-section {
+    background-size: cover;
+    background-position: center;
+    padding: 0px 0;
 }
 
 .ecom-container {
@@ -12,11 +11,13 @@
     padding: 0 20px;
 }
 
-.ecom-banner-section {
-    background-size: cover;
-    background-position: center;
-    padding: 20px 0;
+.ecom-banner-announcement {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
 }
+
 
 .ecom-banner-logo {
     max-width: 100px;
