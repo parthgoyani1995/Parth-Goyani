@@ -251,13 +251,17 @@
         display: block;
     }
 
+    .ecom-banner-announcement .ecom-container
+    {
+        padding: 0;
+    }
+
     .ecom-banner-announcement-wrapper
     {
         display: block;
         text-align: center;
         padding: 22px 0;
         line-height: 1;
-        /*box-shadow: 0px 2px 4px 0px #00000026;*/
     }
 
     .ecom-banner-text-wrapper
