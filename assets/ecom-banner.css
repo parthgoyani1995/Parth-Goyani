@@ -260,7 +260,13 @@
 
     .ecom-banner-text-wrapper
     {
-        
+        text-align: center;
+    }
+
+    .ecom-banner-button, .ecom-banner-content-button
+    {
+        margin:0 auto;
+        width: fit-content;
     }
     .ecom-banner-content .ecom-banner-title {
         font-size: 50px;
