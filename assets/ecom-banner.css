@@ -16,6 +16,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 2;
 }
 
 .ecom-banner-announcement-wrapper {
@@ -61,6 +62,7 @@
     left: 0;
     background: #fff;
     max-width: 600px;
+    z-index: 3;
 }
 
 .ecom-banner-image-area img
