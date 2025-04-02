@@ -58,10 +58,7 @@
     }
 
   /*   Content placement CSS */
-    .ecom-banner-content {
-        top: {{ section.settings.content_top }}%;
-        left: {{ section.settings.content_left }}%;
-    }
+
 
 </style>
 
@@ -260,29 +257,50 @@
       "unit": "px"
     },
     {
-      "type": "header",
-      "content": "Content placement"
+      "type": "select",
+      "id": "content_placement",
+      "label": "Content Placement",
+      "default": "top-left",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "Top Left"
+        },
+        {
+          "value": "top-center",
+          "label": "Top Center"
+        },
+        {
+          "value": "top-right",
+          "label": "Top Right"
+        },
+        {
+          "value": "middle-left",
+          "label": "Middle Left"
+        },
+        {
+          "value": "middle-center",
+          "label": "Middle Center"
+        },
+        {
+          "value": "middle-right",
+          "label": "Middle Right"
+        },
+        {
+          "value": "bottom-left",
+          "label": "Bottom Left"
+        },
+        {
+          "value": "bottom-center",
+          "label": "Bottom Center"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Bottom Right"
+        }
+      ]
     },
-    {
-      "type": "range",
-      "id": "content_top",
-      "label": "Top",
-      "default": 10,
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "%"
-    },
-    {
-      "type": "range",
-      "id": "content_left",
-      "label": "Left",
-      "default": 10,
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "%"
-    },
+
     {
       "type": "header",
       "content": "Bottom announcement bar"
