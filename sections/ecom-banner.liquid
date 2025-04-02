@@ -109,7 +109,20 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-    // menu-burger click open close
+    // menu-burger click open close .ecom-banner-text-wrapper smoothly
+        const menuBurger = document.querySelector('.menu-burger');
+        const ecomBannerTextWrapper = document.querySelector('.ecom-banner-text-wrapper');
+
+        menuBurger.addEventListener('click', function () {
+            if (ecomBannerTextWrapper.style.display === 'none' || ecomBannerTextWrapper.style.display === '') {
+                ecomBannerTextWrapper.style.display = 'block';
+                ecomBannerTextWrapper.style.opacity = '1';
+            } else {
+                ecomBannerTextWrapper.style.display = 'none';
+                ecomBannerTextWrapper.style.opacity = '0';
+            }
+        });
+
     });
 </script>
 {% schema %}
