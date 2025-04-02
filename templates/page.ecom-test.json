@@ -31,11 +31,15 @@
         "button_hover_color": "#000000",
         "content_title": "The Gift Guide",
         "content_subtitle": "Discover Joy: Your Ultimate Holiday Gift Destination.",
-        "content_description": "Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.",
+        "content_description": "<p>Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.</p>",
         "content_button_text": "Shop Now",
         "content_button_link": "shopify://products/classic-leather-jacket",
         "content_button_background_color": "#000000",
-        "content_button_hover_color": "#fff544"
+        "content_button_hover_color": "#fff544",
+        "padding_top": 20,
+        "padding_bottom": 50,
+        "padding_left": 20,
+        "padding_right": 20
       }
     }
   },
