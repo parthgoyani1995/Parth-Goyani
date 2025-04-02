@@ -118,9 +118,10 @@
     z-index: 5;
 }
 
-.ecom-banner-bottom-announcement p
+.ecom-banner-bottom-announcement *
 {
     margin: 0;
+    font-size: 20px;
 }
 
 
