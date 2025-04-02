@@ -3,18 +3,20 @@
     .ecom-banner-section {
         background-image: url({{ section.settings.banner_image | img_url: '2048x' }});
     }
+
     .ecom-banner-button:hover {
         background-color: {{ section.settings.button_hover_color }};
         color: {{ section.settings.button_color }};
     }
-    .ecom-banner-announcement{
+
+    .ecom-banner-announcement {
         background-color: {{ section.settings.announcement_background_color }};
     }
 </style>
 
 <section class="ecom-banner-section">
-	<div class="ecom-container">
-		<div class="ecom-banner-announcement">
+	<div class="ecom-banner-announcement">
+		<div class="ecom-container">
 			{% if section.settings.announcement_logo %}
 				<img src="{{ section.settings.announcement_logo | img_url: '300x' }}" alt="Announcement Logo"
 				     class="ecom-banner-logo">
