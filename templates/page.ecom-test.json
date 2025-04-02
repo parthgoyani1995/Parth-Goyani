@@ -39,7 +39,9 @@
         "padding_top": 20,
         "padding_bottom": 50,
         "padding_left": 20,
-        "padding_right": 20
+        "padding_right": 20,
+        "bottom_announcement_text": "<p>SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL</p>",
+        "bottom_announcement_background_color": "#F5F5F5"
       }
     }
   },
