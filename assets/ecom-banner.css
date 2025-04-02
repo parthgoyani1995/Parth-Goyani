@@ -89,6 +89,11 @@
     line-height: 1.4;
 }
 
+.ecom-banner-content .ecom-banner-description
+{
+    margin-bottom: 50px;
+}
+
 
 /* Responsive css */
 @media (max-width: 768px) {
