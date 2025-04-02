@@ -48,20 +48,18 @@
 	</div>
 	<div class="ecom-banner-image-area">
 		<img src="{{ section.settings.banner_image | img_url: '2048x' }}" alt="Banner Image" class="ecom-banner-img">
-		<div class="ecom-container">
-			<div class="content-wrapper">
-				<div class="ecom-banner-content">
-					<h2 class="ecom-banner-title">{{ section.settings.content_title }}</h2>
-					<h3 class="ecom-banner-subtitle">{{ section.settings.content_subtitle }}</h3>
-					<div class="ecom-banner-description">
-						{{ section.settings.content_description }}
-					</div>
-					<a href="{{ section.settings.content_button_link }}" class="ecom-banner-button">
-						{{ section.settings.content_button_text }}
-						{% render 'right-arrow-icon' %}
-					</a>
-				</div>
+
+
+		<div class="ecom-banner-content">
+			<h2 class="ecom-banner-title">{{ section.settings.content_title }}</h2>
+			<h3 class="ecom-banner-subtitle">{{ section.settings.content_subtitle }}</h3>
+			<div class="ecom-banner-description">
+				{{ section.settings.content_description }}
 			</div>
+			<a href="{{ section.settings.content_button_link }}" class="ecom-banner-button">
+				{{ section.settings.content_button_text }}
+				{% render 'right-arrow-icon' %}
+			</a>
 		</div>
 	</div>
 </section>
