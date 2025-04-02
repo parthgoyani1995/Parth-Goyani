@@ -54,6 +54,7 @@
 .ecom-banner-text-wrapper.active
 {
     display: block;
+    box-shadow: 0px -2px 4px 0px #00000026;
 }
 
 .ecom-banner-text {
