@@ -1,10 +1,10 @@
 {{ 'ecom-banner.css' | asset_url | stylesheet_tag }}
 <style>
-  .ecom-container {
-    max-width: {{ section.settings.container_width }}px;
-  }
+    .ecom-container {
+        max-width: {{ section.settings.container_width }}px;
+    }
 
-  .ecom-banner-section {
+    .ecom-banner-section {
         background-image: url({{ section.settings.banner_image | img_url: '2048x' }});
     }
 
