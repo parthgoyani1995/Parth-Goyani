@@ -1,0 +1,74 @@
+
+.ecom-banner-content {
+    text-align: center;
+    color: #fff;
+}
+.ecom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.ecom-banner-logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.ecom-banner-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.ecom-banner-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .ecom-banner-section {
+        padding: 10px 0;
+    }
+
+    .ecom-banner-text {
+        font-size: 16px;
+    }
+
+    .ecom-banner-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ecom-banner-logo {
+        max-width: 80px;
+    }
+
+    .ecom-banner-text {
+        font-size: 14px;
+    }
+
+    .ecom-banner-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    .ecom-banner-logo {
+        max-width: 60px;
+    }
+
+    .ecom-banner-text {
+        font-size: 12px;
+    }
+
+    .ecom-banner-button {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+}
