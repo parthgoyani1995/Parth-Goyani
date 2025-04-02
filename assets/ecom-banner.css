@@ -265,6 +265,10 @@
     {
         text-align: center;
     }
+    .ecom-banner-mobile-content *
+    {
+        color: #000000;
+    }
     .ecom-banner-announcement-wrapper {
         display: block;
         text-align: center;
