@@ -225,14 +225,17 @@
 }
 @media (max-width: 768px) {
 
-    .mobile-hide
-    {
+    .mobile-hide {
         display: none;
     }
 
-    .desktop-hide
-    {
+    .desktop-hide {
         display: block;
+    }
+
+    .ecom-banner-announcement-wrapper
+    {
+        justify-content: center;
     }
 
     .ecom-banner-content .ecom-banner-title {
