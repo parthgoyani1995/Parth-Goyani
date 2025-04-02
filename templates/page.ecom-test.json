@@ -21,13 +21,12 @@
       "type": "ecom-banner",
       "settings": {
         "container_width": 1400,
-        "banner_image": "shopify://shop_images/city-woman-fashion_925x_2x_e91139c3-68ff-49da-98c9-5a56a049fb30.jpg",
+        "banner_image": "shopify://shop_images/young-female-models-denim_925x_44c2cf9e-4030-4347-9d4a-f0e4a1479b4a.jpg",
         "announcement_background_color": "#f5f5f5",
         "announcement_logo": "shopify://shop_images/svgviewer-png-output.png",
         "announcement_text": "Find the ideal gift for your loved ones.",
         "button_text": "Choose gift",
         "button_link": "",
-        "button_color": "#fff544",
         "button_hover_color": "#000000"
       }
     }
