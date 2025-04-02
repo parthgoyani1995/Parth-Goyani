@@ -269,7 +269,7 @@
     .ecom-banner-text-wrapper.active {
         max-height: 500px; /* Adjust this value based on your content */
         opacity: 1;
-        box-shadow: 0 -2px 4px #00000026;
+        box-shadow: inset 0 6px 6px -3px #00000026;
         margin-top: 22px;
         padding-top: 24px;
     }
