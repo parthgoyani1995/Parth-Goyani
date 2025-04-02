@@ -32,6 +32,18 @@
     .ecom-banner-content {
         padding: {{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }}px {{ section.settings.padding_left }}px;
     }
+
+    .ecom-banner-content-button
+    {
+        background: linear-gradient(to right, {{ section.settings.content_button_hover_color }} 50%, {{ section.settings.content_button_background_color }} 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all 0.3s ease-out;
+    }
+    .ecom-banner-content-button:hover {
+        background-position: left bottom;
+        color: #FFFFFF;
+    }
 </style>
 
 <section class="ecom-banner-section">
