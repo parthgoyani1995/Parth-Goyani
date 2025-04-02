@@ -24,9 +24,10 @@
 }
 
 .ecom-banner-text {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     text-align: center;
+    Margin: 0;
 }
 
 .ecom-banner-button {
