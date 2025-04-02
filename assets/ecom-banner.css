@@ -311,6 +311,11 @@
     {
         margin: 0 auto;
     }
+    .ecom-banner-bottom-announcement *
+    {
+        font-size: 14px;
+
+    }
 }
 
 @media (max-width: 480px) {
