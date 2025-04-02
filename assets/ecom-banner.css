@@ -69,18 +69,18 @@
 }
 
 .ecom-banner-content.placement-bottom-left {
-    bottom: 0;
+    bottom: 46px;
     left: 0;
 }
 
 .ecom-banner-content.placement-bottom-center {
-    bottom: 0;
+    bottom: 46px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .ecom-banner-content.placement-bottom-right {
-    bottom: 0;
+    bottom: 46px;
     right: 0;
 }
 
