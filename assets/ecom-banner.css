@@ -6,12 +6,13 @@
     padding: 0 0;
     position: relative;
 }
+
 .ecom-container {
     margin: 0 auto;
     padding: 0 20px;
 }
-.ecom-banner-announcement
-{
+
+.ecom-banner-announcement {
     position: absolute;
     top: 0;
     left: 0;
@@ -39,7 +40,7 @@
 }
 
 .ecom-banner-button,
-ecom-banner-content-button{
+.ecom-banner-content-button {
     display: flex;
     padding: 10px 20px 10px 40px;
     text-decoration: none;
@@ -52,12 +53,11 @@ ecom-banner-content-button{
 }
 
 /* Banner image CSS */
-.ecom-banner-image-area
-{
+.ecom-banner-image-area {
     position: relative;
 }
-.ecom-banner-content
-{
+
+.ecom-banner-content {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -66,32 +66,28 @@ ecom-banner-content-button{
     z-index: 3;
 }
 
-.ecom-banner-image-area img
-{
+.ecom-banner-image-area img {
     width: 100%;
     height: auto;
     max-width: 100%;
     display: block;
 }
 
-.ecom-banner-content .ecom-banner-title
-{
+.ecom-banner-content .ecom-banner-title {
     font-size: 82px;
     margin-bottom: 40px;
     margin-top: 0;
 }
 
 .ecom-banner-content .ecom-banner-subtitle,
-.ecom-banner-content .ecom-banner-description *
-{
+.ecom-banner-content .ecom-banner-description * {
     font-size: 20px;
     margin: 00px;
     color: #000000;
     line-height: 1.4;
 }
 
-.ecom-banner-content .ecom-banner-description
-{
+.ecom-banner-content .ecom-banner-description {
     margin-bottom: 50px;
 }
 
