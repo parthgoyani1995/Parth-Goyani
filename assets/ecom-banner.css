@@ -85,18 +85,18 @@
 }
 
 .ecom-banner-content.placement-top-left {
-    top: 0;
+    top: 86px;
     left: 0;
 }
 
 .ecom-banner-content.placement-top-center {
-    top: 0;
+    top: 86px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .ecom-banner-content.placement-top-right {
-    top: 0;
+    top: 86px;
     right: 0;
 }
 
