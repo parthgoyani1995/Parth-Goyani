@@ -53,7 +53,7 @@
   /*   Content placement CSS */
     .ecom-banner-content {
         top: {{ section.settings.content_top }}%;
-        bottom: {{ section.settings.content_bottom }}%;
+        left: {{ section.settings.content_left }}%;
     }
 
 </style>
@@ -253,8 +253,8 @@
     },
     {
       "type": "range",
-      "id": "content_bottom",
-      "label": "Bottom",
+      "id": "content_left",
+      "label": "Left",
       "default": 10,
       "min": 0,
       "max": 100,
