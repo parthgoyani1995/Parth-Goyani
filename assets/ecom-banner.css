@@ -53,7 +53,7 @@
 
 .ecom-banner-text-wrapper.active
 {
-    
+
 }
 
 .ecom-banner-text {
@@ -253,6 +253,7 @@
 
     .ecom-banner-announcement-wrapper
     {
+        display: block;
         justify-content: center;
         padding: 22px 0;
     }
