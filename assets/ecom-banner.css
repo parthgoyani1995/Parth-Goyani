@@ -259,6 +259,7 @@
         padding: 0;
     }
 
+
     .ecom-banner-announcement-wrapper
     {
         display: block;
@@ -270,6 +271,11 @@
     .ecom-banner-text-wrapper
     {
         text-align: center;
+    }
+
+    .ecom-banner-text
+    {
+        margin-bottom: 20px;
     }
 
     .ecom-banner-button, .ecom-banner-content-button
