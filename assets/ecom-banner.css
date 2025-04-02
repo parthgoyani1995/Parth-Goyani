@@ -68,51 +68,51 @@
     z-index: 3;
 }
 
-.ecom-banner-content .placement-bottom-left {
+.ecom-banner-content.placement-bottom-left {
     bottom: 0;
     left: 0;
 }
 
-.ecom-banner-content .placement-bottom-center {
+.ecom-banner-content.placement-bottom-center {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.ecom-banner-content .placement-bottom-right {
+.ecom-banner-content.placement-bottom-right {
     bottom: 0;
     right: 0;
 }
 
-.ecom-banner-content .placement-top-left {
+.ecom-banner-content.placement-top-left {
     top: 0;
     left: 0;
 }
 
-.ecom-banner-content .placement-top-center {
+.ecom-banner-content.placement-top-center {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.ecom-banner-content .placement-top-right {
+.ecom-banner-content.placement-top-right {
     top: 0;
     right: 0;
 }
 
-.ecom-banner-content .placement-middle-left {
+.ecom-banner-content.placement-middle-left {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
 }
 
-.ecom-banner-content .placement-middle-center {
+.ecom-banner-content.placement-middle-center {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.ecom-banner-content .placement-middle-right {
+.ecom-banner-content.placement-middle-right {
     top: 50%;
     right: 0;
     transform: translateY(-50%);
