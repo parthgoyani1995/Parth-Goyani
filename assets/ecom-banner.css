@@ -31,6 +31,13 @@
 .ecom-banner-logo {
     max-width: 200px;
 }
+.ecom-banner-text-wrapper
+{
+    display: flex;
+    flex-basis: 64.66%;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .ecom-banner-text {
     font-size: 20px;
