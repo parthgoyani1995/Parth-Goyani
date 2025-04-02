@@ -90,7 +90,11 @@
 .ecom-banner-content .ecom-banner-description {
     margin-bottom: 50px;
 }
-
+.ecom-banner-content .ecom-banner-content-button
+{
+    color: #FFFFFF;
+    width: auto;
+}
 .ecom-banner-content .ecom-banner-content-button svg path
 {
     fill: #fff;
