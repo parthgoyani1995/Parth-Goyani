@@ -280,7 +280,9 @@
     .ecom-banner-content
     {
         background: transparent;
-        
+        left: 50% !important;
+        bottom: 100px !important;
+        transform: translateX(-50%);
     }
 }
 
