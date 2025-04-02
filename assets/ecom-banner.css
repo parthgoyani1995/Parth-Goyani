@@ -8,7 +8,11 @@
     margin: 0 auto;
     padding: 0 20px;
 }
-
+.ecom-banner-section {
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0;
+}
 .ecom-banner-logo {
     max-width: 100px;
     margin-bottom: 10px;
