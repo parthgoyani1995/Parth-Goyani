@@ -68,11 +68,13 @@
 					<img src="{{ section.settings.announcement_logo | img_url: '300x' }}" alt="Announcement Logo"
 					     class="ecom-banner-logo">
 				{% endif %}
+              <div class="">
 				<p class="ecom-banner-text">{{ section.settings.announcement_text }}</p>
 				<a href="{{ section.settings.button_link }}" class="ecom-banner-button">
 					{{ section.settings.button_text }}
 					{% render 'right-arrow-icon' %}
 				</a>
+              </div>
 			</div>
 		</div>
 	</div>
