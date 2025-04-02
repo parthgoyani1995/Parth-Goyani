@@ -12,6 +12,16 @@
     padding: 0 20px;
 }
 
+
+.menu-burger
+{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
 .ecom-banner-announcement {
     position: absolute;
     top: 0;
@@ -183,6 +193,7 @@
 {
     display: none;
 }
+
 
 /* Responsive css */
 @media (max-width: 991px) {
