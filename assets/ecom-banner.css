@@ -179,7 +179,10 @@
     font-size: 20px;
 }
 
-
+.desktop-hide
+{
+    display: none;
+}
 
 /* Responsive css */
 @media (max-width: 991px) {
@@ -226,7 +229,12 @@
     {
         display: none;
     }
-    
+
+    .desktop-hide
+    {
+        display: block;
+    }
+
     .ecom-banner-content .ecom-banner-title {
         font-size: 50px;
     }
