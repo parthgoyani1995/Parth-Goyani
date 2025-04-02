@@ -50,6 +50,11 @@
 }
 
 /* Banner image CSS */
+.ecom-banner-image-area
+{
+    position: relative;
+}
+
 .ecom-banner-image-area img
 {
     width: 100%;
