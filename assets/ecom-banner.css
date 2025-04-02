@@ -307,6 +307,10 @@
         transform: translateX(-50%);
         width: 100%;
     }
+    .ecom-banner-content-button
+    {
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 480px) {
