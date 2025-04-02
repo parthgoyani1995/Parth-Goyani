@@ -1,7 +1,15 @@
 {{ 'ecom-banner.css' | asset_url | stylesheet_tag }}
 <section class="ecom-banner-section">
 	<div class="ecom-container">
-		// 
+		<div class="ecom-banner-content">
+			{% if section.settings.announcement_logo %}
+				<img src="{{ section.settings.announcement_logo | img_url: '300x' }}" alt="Announcement Logo" class="ecom-banner-logo">
+			{% endif %}
+			<p class="ecom-banner-text">{{ section.settings.announcement_text }}</p>
+			<a href="{{ section.settings.button_link }}" class="ecom-banner-button" style="background-color: {{ section.settings.button_color }}; color: {{ section.settings.button_hover_color }};">
+				{{ section.settings.button_text }}
+			</a>
+		</div>
 	</div>
 </section>
 
