@@ -236,6 +236,7 @@
     .ecom-banner-announcement-wrapper
     {
         justify-content: center;
+        padding: 22px 0;
     }
 
     .ecom-banner-content .ecom-banner-title {
