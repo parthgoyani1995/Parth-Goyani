@@ -91,6 +91,11 @@
     margin-bottom: 50px;
 }
 
+.ecom-banner-content .ecom-banner-content-button svg path
+{
+    fill: #fff;
+}
+
 
 /* Responsive css */
 @media (max-width: 768px) {
