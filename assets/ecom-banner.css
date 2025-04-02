@@ -51,6 +51,11 @@
     align-items: center;
 }
 
+.ecom-banner-text-wrapper.active
+{
+    
+}
+
 .ecom-banner-text {
     font-size: 20px;
     font-weight: 400;
