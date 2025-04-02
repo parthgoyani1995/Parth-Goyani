@@ -264,10 +264,23 @@
         padding: 22px 0;
         line-height: 1;
     }
-
     .ecom-banner-text-wrapper {
-        text-align: center;
+        display: block;
+        transition: all 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
     }
+
+    .ecom-banner-text-wrapper.active {
+        max-height: 500px; /* Adjust this value based on your content */
+        opacity: 1;
+        box-shadow: 0 -2px 4px #00000026;
+        margin-top: 22px;
+        padding-top: 24px;
+    }
+
+
 
     .ecom-banner-text {
         margin-bottom: 20px;
