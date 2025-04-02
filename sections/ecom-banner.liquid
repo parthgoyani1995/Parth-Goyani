@@ -29,7 +29,7 @@
     }
 
     /*  Banner content area css  */
-    .ecom-banner-image-area {
+    .ecom-banner-content {
         padding: {{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }}px {{ section.settings.padding_left }}px;
     }
 </style>
@@ -52,7 +52,6 @@
 	</div>
 	<div class="ecom-banner-image-area">
 		<img src="{{ section.settings.banner_image | img_url: '2048x' }}" alt="Banner Image" class="ecom-banner-img">
-
 
 		<div class="ecom-banner-content">
 			<h2 class="ecom-banner-title">{{ section.settings.content_title }}</h2>
