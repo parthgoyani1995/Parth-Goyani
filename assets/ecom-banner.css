@@ -305,6 +305,7 @@
         left: 50% !important;
         bottom: 50px !important;
         transform: translateX(-50%);
+        width: 100%;
     }
 }
 
