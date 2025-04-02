@@ -1,6 +1,10 @@
 {{ 'ecom-banner.css' | asset_url | stylesheet_tag }}
 <style>
-    .ecom-banner-section {
+  .ecom-container {
+    max-width: {{ section.settings.container-width }}px;
+  }
+
+  .ecom-banner-section {
         background-image: url({{ section.settings.banner_image | img_url: '2048x' }});
     }
 
@@ -36,6 +40,15 @@
 {
   "name": "Ecom Banner",
   "settings": [
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Container Width",
+      "default": 1200,
+      "min": 1000,
+      "max": 1900,
+      "step": 50
+    },
     {
       "type": "image_picker",
       "id": "banner_image",
