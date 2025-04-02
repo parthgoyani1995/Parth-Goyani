@@ -1,10 +1,10 @@
+/* Ecom Banner Styles */
 
 .ecom-banner-section {
     background-size: cover;
     background-position: center;
     padding: 0 0;
 }
-
 .ecom-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -27,7 +27,7 @@
     font-size: 16px;
     font-weight: 400;
     text-align: center;
-    Margin: 0;
+    margin: 0;
 }
 
 .ecom-banner-button {
