@@ -41,7 +41,8 @@
 
 .desktop-small-popup-content {
     display: flex;
-    flex-direction: column;
+    background: #FFF;
+    padding: 10px;
 }
 
 .desktop-small-popup-image img {
