@@ -129,4 +129,6 @@
     position: absolute;
     left: 0;
     top: 0;
+    width: 5px;
+    border-right: 0.5px solid #000;
 }
