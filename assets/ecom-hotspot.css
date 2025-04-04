@@ -80,7 +80,7 @@
 .popup-content .popup-product-title
 {
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     font-weight: 300;
 }
 .popup-content .popup-product-price
@@ -89,7 +89,7 @@
     font-weight: bold;
     font-family: "Lustria", serif;
     color: #000;
-    margin-bottom: 20px;
+    margin-bottom: 13px;
 }
 .popup-content .popup-product-description
 {
