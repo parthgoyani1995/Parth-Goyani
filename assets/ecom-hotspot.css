@@ -170,7 +170,7 @@
     transition: transform 0.3s ease;
 }
 
-.popup-variant-dropdown.open::after {
+.popup-variant-dropdown.open .dropdown-icon {
     transform: translateY(-50%) rotate(180deg); /* Rotate arrow when open */
 }
 
