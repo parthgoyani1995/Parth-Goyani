@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function ()
             });
         });
     }
-    
+
     /* Dropdown menu */
     const dropdowns = document.querySelectorAll('.popup-variant-dropdown');
 
@@ -38,7 +38,15 @@ document.addEventListener("DOMContentLoaded", function ()
 
         dropdown.addEventListener('click', function ()
         {
-            dropdown.classList.toggle('open');
+            if ( !dropdown.classList.contains('open') )
+            {
+                dropdowns.forEach(d => d.classList.remove('open'));
+                dropdown.classList.add('open');
+            }
+            else
+            {
+                dropdown.classList.remove('open');
+            }
         });
 
         select.querySelectorAll('span').forEach(option =>
