@@ -160,7 +160,10 @@
 }
 .dropdown-wrapper .dropdown-icon
 {
-    flex-basis: 50px;
+    flex-basis: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
 
 .popup-variant-dropdown.dropdown-icon {
