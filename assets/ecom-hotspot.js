@@ -20,6 +20,17 @@ document.addEventListener("DOMContentLoaded", function ()
     /* Dropdown menu */
     const dropdowns = document.querySelectorAll('.popup-variant-dropdown');
 
+    document.addEventListener('click', function (event)
+    {
+        dropdowns.forEach(dropdown =>
+        {
+            if ( !dropdown.contains(event.target) )
+            {
+                dropdown.classList.remove('open');
+            }
+        });
+    });
+
     dropdowns.forEach(dropdown =>
     {
         const select = dropdown.querySelector('.popup-item-variant-select');
@@ -40,14 +51,4 @@ document.addEventListener("DOMContentLoaded", function ()
         });
     });
 
-    document.addEventListener('click', function (event)
-    {
-        dropdowns.forEach(dropdown =>
-        {
-            if ( !dropdown.contains(event.target) )
-            {
-                dropdown.classList.remove('open');
-            }
-        });
-    });
 });
