@@ -1,52 +1,55 @@
 <div class="popup-item" id="{{ popupid }}">
-		    <div class="popup-close">
-		        {% render 'close-icon' %}
-		    </div>
-		    <div class="product-wrapper">
-		        <div class="popup-image">
-		            <img src="{{ product.featured_image | image_url: width: 120, height: 140, crop: 'center' }}" alt="Hotspot image"/>
-		        </div>
-		        <div class="popup-product">
-		            <div class="popup-product-title">
-		                {{ product.title }}
-		            </div>
-		            <div class="popup-product-price">
-		                {{ product.price | money }}
-		            </div>
-		            <div class="popup-product-description">
-		                {{ product.description | strip_html | truncatewords: 15 }}
-		            </div>
-		        </div>
-		    </div>
-		    <div class="popup-item-variants">
-		        {% for option in product.options_with_values %}
-		            {% if option.name == 'Color' %}
-		                <label>Color</label>
-		                <div class="popup-item-variant popup-variant-swatch">
-		                    {% for value in option.values %}
-		                        <div class="popup-item-variant-color">
-		                            <span class="color-code" style="background-color: {{ value | downcase }};"></span>
-		                            {{ value }}
-		                        </div>
-		                    {% endfor %}
-		                </div>
-		            {% endif %}
-		        {% endfor %}
-		        {% for option in product.options_with_values %}
-		            {% if option.name == 'Size' %}
-		                <div class="popup-item-variant popup-variant-dropdown">
-		                    <label>Size</label>
-			                <div class="dropdown-wrapper">
-		                        <div class="selected-value">{{ product.options_with_values[0].values[0] }}</div>
-				                {% render 'dropdown-icon' %}
-			                </div>
-		                    <div class="popup-item-variant-select">
-		                        {% for value in option.values %}
-		                            <span data-value="{{ value }}">{{ value }}</span>
-		                        {% endfor %}
-		                    </div>
-		                </div>
-		            {% endif %}
-		        {% endfor %}
-		    </div>
+	<div class="popup-close">
+		{% render 'close-icon' %}
+	</div>
+	<div class="product-wrapper">
+		<div class="popup-image">
+			<img src="{{ product.featured_image | image_url: width: 120, height: 140, crop: 'center' }}"
+			     alt="Hotspot image"/>
 		</div>
+		<div class="popup-product">
+			<div class="popup-product-title">
+				{{ product.title }}
+			</div>
+			<div class="popup-product-price">
+				{{ product.price | money }}
+			</div>
+			<div class="popup-product-description">
+				{{ product.description | strip_html | truncatewords: 15 }}
+			</div>
+		</div>
+	</div>
+	<div class="popup-item-variants">
+		{% for option in product.options_with_values %}
+			{% if option.name == 'Color' %}
+				<label>Color</label>
+				<div class="popup-item-variant popup-variant-swatch">
+					{% for value in option.values %}
+						<div class="popup-item-variant-color">
+							<span class="color-code" style="background-color: {{ value | downcase }};"></span>
+							{{ value }}
+						</div>
+					{% endfor %}
+				</div>
+			{% endif %}
+		{% endfor %}
+		{% for option in product.options_with_values %}
+			{% if option.name == 'Size' %}
+				<div class="popup-item-variant popup-variant-dropdown">
+					<label>Size</label>
+					<div class="dropdown-wrapper">
+						<div class="selected-value">{{ product.options_with_values[0].values[0] }}</div>
+						<span class="dropdown-icon">
+				                {% render 'dropdown-icon' %}
+		                </span>
+					</div>
+					<div class="popup-item-variant-select">
+						{% for value in option.values %}
+							<span data-value="{{ value }}">{{ value }}</span>
+						{% endfor %}
+					</div>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>
