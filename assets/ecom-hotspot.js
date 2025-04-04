@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function ()
     }
 
     /* drop down menu */
-    
+
     const dropdowns = document.querySelectorAll('.popup-variant-dropdown');
 
     dropdowns.forEach(dropdown =>
