@@ -21,7 +21,7 @@
 					      style="left: {{ block.settings.hotspot_left }}%; top: {{ block.settings.hotspot_top }}%;">
 						{% render 'plus-circle-icon' %}
 					</span>
-					<div class="desktop-small-popup" style="left: calc({{ block.settings.hotspot_left }}% - 200); top: calc({{ block.settings.hotspot_top }}% - 200);">
+					<div class="desktop-small-popup" style="left: calc({{ block.settings.hotspot_left }}% - 200px); top: calc({{ block.settings.hotspot_top }}% - 200px);">
 						<div class="desktop-small-popup-content">
 							<div class="desktop-small-popup-image">
 								<img src="{{ block.settings.hotspot_image | image_url: width: 50, height: 50, crop: 'center' }}"
