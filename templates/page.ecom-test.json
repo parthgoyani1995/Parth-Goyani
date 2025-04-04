@@ -2,13 +2,44 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "ecom_banner_pNDiVT": {
+      "type": "ecom-banner",
+      "settings": {
+        "container_width": 1400,
+        "banner_image": "shopify:\/\/shop_images\/dark-mens-fashion-mock-turtle-neck.jpg",
+        "banner_image_height": 950,
+        "announcement_background_color": "#f5f5f5",
+        "announcement_logo": "shopify:\/\/shop_images\/svgviewer-png-output.png",
+        "announcement_text": "Find the ideal gift for your loved ones.",
+        "button_text": "Choose gift",
+        "button_link": "",
+        "button_background_color": "#fff544",
+        "button_hover_color": "#000000",
+        "content_title": "The Gift Guide",
+        "content_subtitle": "Discover Joy: Your Ultimate Holiday Gift Destination.",
+        "content_description": "<p>Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.<\/p>",
+        "content_button_text": "Shop Now",
+        "content_button_link": "shopify:\/\/products\/classic-leather-jacket",
+        "content_button_background_color": "#000000",
+        "content_button_hover_color": "#fff544",
+        "padding_top": 20,
+        "padding_bottom": 50,
+        "padding_left": 20,
+        "padding_right": 20,
+        "content_placement": "bottom-left",
+        "bottom_announcement_text": "<p>SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL<\/p>",
+        "bottom_announcement_background_color": "#f5f5f5"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "ecom_banner_pNDiVT"
   ]
 }
