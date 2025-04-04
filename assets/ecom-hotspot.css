@@ -1,0 +1,25 @@
+.ecom-hotspot-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.ecom-hotspot-item {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    position: relative;
+}
+
+.ecom-hotspot-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ecom-hotspot-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}

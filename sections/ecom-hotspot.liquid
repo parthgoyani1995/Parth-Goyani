@@ -6,7 +6,17 @@
 </style>
 <section class="ecom-hotspot-section">
 	<div class="ecom-hotspot-container">
-
+		<div class="ecom-hotspot-grid">
+			{% for block in section.blocks %}
+				<div class="ecom-hotspot-item">
+					<a href="{{ block.settings.hotspot_product | product_url }}">
+						<img src="{{ block.settings.hotspot_image | img_url: '800x' }}"
+						     alt="{{ block.settings.hotspot_product.title }}"/>
+						<span class="ecom-hotspot-title">{{ block.settings.hotspot_product.title }}</span>
+					</a>
+				</div>
+			{% endfor %}
+		</div>
 	</div>
 </section>
 {{ 'ecom-hotspot.js' | asset_url | stylesheet_tag }}
