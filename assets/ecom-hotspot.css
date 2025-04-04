@@ -30,7 +30,7 @@
 }
 
 /* Hotspot popup item */
-/* Hotspot popup item */
+
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -38,6 +38,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
+    /*display: none;*/
     justify-content: center;
     align-items: center;
     z-index: 99;
@@ -52,6 +53,7 @@
     transform: translate(-50%, -50%);
     max-width: 311px;
     width: 100%;
+
 }
 
 .popup-close {
@@ -60,34 +62,36 @@
     right: 10px;
     cursor: pointer;
 }
-
-.popup-content .popup-item {
+.popup-content .popup-item{
     display: none;
 }
 
-.popup-content .popup-item:first-child {
+.popup-content .popup-item:first-child
+{
     display: block;
 }
 
-.popup-content .product-wrapper {
+.popup-content .product-wrapper
+{
     display: flex;
     column-gap: 10px;
 }
 
-.popup-content .popup-product-title {
+.popup-content .popup-product-title
+{
     font-size: 16px;
     margin-bottom: 12px;
     font-weight: 300;
 }
-
-.popup-content .popup-product-price {
+.popup-content .popup-product-price
+{
     font-size: 16px;
     font-family: "Lustria", serif;
     color: #000;
     margin-bottom: 13px;
 }
-
-.popup-content .popup-product-description {
+.popup-content .popup-product-description
+{
     font-size: 12px;
     color: #000;
     font-weight: 300;
@@ -95,13 +99,13 @@
     letter-spacing: 1px;
 }
 
-.popup-content .popup-variant-swatch {
+.popup-content .popup-variant-swatch
+{
     display: flex;
     width: 100%;
     position: relative;
 }
-
-.popup-content .popup-variant-swatch label {
+.popup-content .popup-variant-swatch label{
     font-size: 14px;
     color: #000;
     font-weight: 300;
@@ -110,7 +114,7 @@
 .popup-content .popup-variant-swatch .popup-item-variant-color {
     padding: 10px;
     display: inline-block;
-    border: 1px solid #000;
+    border: 1px solid #000000;
     line-height: 1;
     font-size: 18px;
     flex-basis: 50%;
@@ -126,7 +130,20 @@
     z-index: 2;
 }
 
-.popup-content .popup-variant-swatch .popup-item-variant-color.active::before,
+.popup-content .popup-variant-swatch::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
+}
+.popup-content .popup-variant-swatch .popup-item-variant-color.active::before {
+    width: 0;
+}
 .popup-content .popup-variant-swatch .popup-item-variant-color.active::after {
     content: '';
     position: absolute;
@@ -136,9 +153,15 @@
     height: 100%;
     background-color: #000;
     z-index: -1;
-    transition: width 0.3s ease-in-out;
 }
 
-.popup-content .popup-variant-swatch .popup-item-variant-color.active::before {
-    width: 0;
+.popup-content .popup-variant-swatch .color-code
+{
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    border-right: 0.5px solid #000;
 }
