@@ -24,4 +24,6 @@
 .ecom-hotspot-item .ecom-hotspot-icon
 {
     cursor: pointer;
+    position: absolute;
+    transform: translate(-50%, -50%);
 }
