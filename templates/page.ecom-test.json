@@ -19,6 +19,7 @@
     },
     "ecom_banner_pNDiVT": {
       "type": "ecom-banner",
+      "disabled": true,
       "settings": {
         "container_width": 1400,
         "banner_image": "shopify://shop_images/dark-mens-fashion-mock-turtle-neck.jpg",
@@ -45,10 +46,15 @@
         "bottom_announcement_text": "<p>SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL</p>",
         "bottom_announcement_background_color": "#f5f5f5"
       }
+    },
+    "ecom_hotspot_FycQbm": {
+      "type": "ecom-hotspot",
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "ecom_banner_pNDiVT"
+    "ecom_banner_pNDiVT",
+    "ecom_hotspot_FycQbm"
   ]
 }
