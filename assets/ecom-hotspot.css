@@ -148,6 +148,19 @@
     display: flex;
     align-content: center;
     justify-content: space-between;
+    border: 1px solid #000000;
+}
+
+.dropdown-wrapper .selected-value
+{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border-right: 1px solid #000000;
+}
+.dropdown-wrapper .dropdown-icon
+{
+    flex-basis: 50px;
 }
 
 .popup-variant-dropdown.dropdown-icon {
