@@ -3,35 +3,39 @@
     .ecom-hotspot-container {
         max-width: {{ section.settings.hotspot_container_width }}px;
     }
+
+
 </style>
 <section class="ecom-hotspot-section">
 	<div class="ecom-hotspot-container">
 		<div class="ecom-hotspot-grid">
 			{% for block in section.blocks %}
-				<div class="ecom-hotspot-item">
-					<img src="{{ block.settings.hotspot_image | image_url: width: 450, height: 450, crop: 'center' }}"
-					     class="ecom-hotspot-image" alt="Hotspot image"/>
-					<span class="ecom-hotspot-icon icon-desktop mobile-hide" style=" left: {{ block.settings.hotspot_left }}%; top: {{ block.settings.hotspot_top }}%;">
+			<div class="ecom-hotspot-item">
+				<img src="{{ block.settings.hotspot_image | image_url: width: 450, height: 450, crop: 'center' }}"
+				     class="ecom-hotspot-image" alt="Hotspot image"/>
+				<span class="ecom-hotspot-icon icon-desktop mobile-hide"
+				      style=" left: {{ block.settings.hotspot_left }}%; top: {{ block.settings.hotspot_top }}%;">
 						{% render 'plus-circle-icon' %}
 					</span>
-					<span class="ecom-hotspot-icon icon-mobile desktop-hide" style=" left: {{ block.settings.hotspot_left }}%; top: {{ block.settings.hotspot_top }}%;">
+				<span class="ecom-hotspot-icon icon-mobile desktop-hide"
+				      style=" left: {{ block.settings.hotspot_left }}%; top: {{ block.settings.hotspot_top }}%;">
 						{% render 'plus-circle-icon' %}
 					</span>
-					<div class="desktop-small-popup">
-						<div class="desktop-small-popup-content">
-							<div class="desktop-small-popup-image">
-								<img src="{{ block.settings.hotspot_image | image_url: width: 150, height: 150, crop: 'center' }}"
-								     alt="Hotspot image"/>
-							</div>
-							<div class="desktop-small-popup-text">
-								<h3>{{ block.settings.hotspot_product.title }}</h3>
-								<p>{{ block.settings.hotspot_product.price | money }}</p>
-							</div>
+				<div class="desktop-small-popup">
+					<div class="desktop-small-popup-content">
+						<div class="desktop-small-popup-image">
+							<img src="{{ block.settings.hotspot_image | image_url: width: 150, height: 150, crop: 'center' }}"
+							     alt="Hotspot image"/>
+						</div>
+						<div class="desktop-small-popup-text">
+							<h3>{{ block.settings.hotspot_product.title }}</h3>
+							<p>{{ block.settings.hotspot_product.price | money }}</p>
 						</div>
 					</div>
-			{% endfor %}
+				</div>
+				{% endfor %}
+			</div>
 		</div>
-	</div>
 </section>
 {{ 'ecom-hotspot.js' | asset_url | stylesheet_tag }}
 
