@@ -20,6 +20,20 @@
 		</div>
 	</div>
 	<div class="popup-item-variants">
-		 
+
+		{% for option in product.options %}
+			{% if option.name == 'Color' %}
+				<div class="popup-item-variant">
+					{{ option.name }}: {{ option.values | join: ', ' }}
+				</div>
+			{% endif %}
+		{% endfor %}
+		{% for option in product.options %}
+			{% if option.name == 'Size' %}
+				<div class="popup-item-variant">
+					{{ option.name }}: {{ option.values | join: ', ' }}
+				</div>
+			{% endif %}
+		{% endfor %}
 	</div>
 </div>
