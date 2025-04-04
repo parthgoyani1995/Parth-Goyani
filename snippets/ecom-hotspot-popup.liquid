@@ -7,6 +7,15 @@
 		     alt="Hotspot image"/>
 	</div>
 	<div class="popup-product">
-
+		title, price description
+		<div class="popup-product-title">
+			{{ product.title }}
+		</div>
+		<div class="popup-product-price">
+			{{ product.price | money }}
+		</div>
+		<div class="popup-product-description">
+			{{ product.description | strip_html | truncatewords: 20 }}
+		</div>
 	</div>
 </div>
