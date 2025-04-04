@@ -111,6 +111,10 @@
     font-weight: 300;
 }
 
+.popup-content .popup-variant-swatch .color-code
+{
+    width: 5px;
+}
 .popup-content .popup-variant-swatch .popup-item-variant-color
 {
     padding: 10px;
