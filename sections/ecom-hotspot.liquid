@@ -13,26 +13,10 @@
 				<div class="ecom-hotspot-item">
 					<img src="{{ block.settings.hotspot_image | image_url: width: 450, height: 450, crop: 'center' }}"
 					     class="ecom-hotspot-image" alt="Hotspot image"/>
-					<span class="ecom-hotspot-icon icon-desktop mobile-hide"
+					<span class="ecom-hotspot-icon"
 					      style=" left: {{ block.settings.hotspot_left }}%; top: {{ block.settings.hotspot_top }}%;">
 						{% render 'plus-circle-icon' %}
 					</span>
-					<span class="ecom-hotspot-icon icon-mobile desktop-hide"
-					      style="left: {{ block.settings.hotspot_left }}%; top: {{ block.settings.hotspot_top }}%;">
-						{% render 'plus-circle-icon' %}
-					</span>
-					<div class="desktop-small-popup" style="left: calc({{ block.settings.hotspot_left }}% - 170px); top: calc({{ block.settings.hotspot_top }}% + 15px);">
-						<div class="desktop-small-popup-content">
-							<div class="desktop-small-popup-image">
-								<img src="{{ block.settings.hotspot_image | image_url: width: 50, height: 50, crop: 'center' }}"
-								     alt="Hotspot image"/>
-							</div>
-							<div class="desktop-small-popup-text">
-								<p class="product-title">{{ block.settings.hotspot_product.title }}</p>
-								<p class="product-price">{{ block.settings.hotspot_product.price | money }}</p>
-							</div>
-						</div>
-					</div>
 				</div>
 			{% endfor %}
 		</div>
