@@ -22,6 +22,7 @@
 	<div class="popup-item-variants">
 
 		{% for option in product.options %}
+			option.name == {{  option.name }}
 			{% if option.name == 'Color' %}
 				<div class="popup-item-variant">
 					{{ option.name }}: {{ option.values | join: ', ' }}
