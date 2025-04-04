@@ -18,7 +18,16 @@
 						{% render 'plus-circle-icon' %}
 					</span>
 					<div class="desktop-small-popup">
-						Left image, right
+						<div class="desktop-small-popup-content">
+							<div class="desktop-small-popup-image">
+								<img src="{{ block.settings.hotspot_image | image_url: width: 150, height: 150, crop: 'center' }}"
+								     alt="Hotspot image"/>
+							</div>
+							<div class="desktop-small-popup-text">
+								<h3>{{ block.settings.hotspot_product.title }}</h3>
+								<p>{{ block.settings.hotspot_product.price | money }}</p>
+							</div>
+						</div>
 					</div>
 			{% endfor %}
 		</div>
