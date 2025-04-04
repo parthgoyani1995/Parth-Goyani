@@ -122,7 +122,7 @@
     cursor: pointer;
     background: linear-gradient(to right, #000000 50%, #FFFFFF 50%);
     background-size: 200% 100%;
-    background-position: left bottom;
+    background-position: right bottom;
     transition: all 0.3s ease-out;
 }
 
