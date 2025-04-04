@@ -111,15 +111,6 @@
     font-weight: 300;
 }
 
-.popup-content .popup-variant-swatch .color-code
-{
-    background-color: black;
-    display: inline-block;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
 .popup-content .popup-variant-swatch .popup-item-variant-color
 {
     padding: 10px;
@@ -128,4 +119,15 @@
     line-height: 1;
     font-size: 18px;
     flex-basis: 50%;
+    position: relative;
+}
+
+.popup-content .popup-variant-swatch .color-code
+{
+    background-color: black;
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
