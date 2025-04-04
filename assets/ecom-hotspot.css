@@ -135,12 +135,18 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000;
-    z-index: 0;
-    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    z-index: -1;
 }
 .popup-content .popup-variant-swatch .popup-item-variant-color.active::before {
-    width: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: -1;
 }
 .popup-content .popup-variant-swatch .popup-item-variant-color.active::after {
     content: '';
