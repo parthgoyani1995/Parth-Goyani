@@ -63,11 +63,19 @@
             "hotspot_image": "shopify://shop_images/man-adjusts-blue-tuxedo-bowtie_925x_55a49e12-d54b-488e-b7a0-ea4c201eb01f.jpg",
             "hotspot_product": "blue-silk-tuxedo"
           }
+        },
+        "hotspot_3VPR39": {
+          "type": "hotspot",
+          "settings": {
+            "hotspot_image": "shopify://shop_images/red-plaid-shirt_925x_70e9e5a8-8fc5-4d60-9a9a-cc2e0dd57cc9.jpg",
+            "hotspot_product": "chequered-red-shirt"
+          }
         }
       },
       "block_order": [
         "hotspot_ayywRk",
-        "hotspot_NeQPm3"
+        "hotspot_NeQPm3",
+        "hotspot_3VPR39"
       ],
       "settings": {
         "title": "Tisso vison in the wild"
