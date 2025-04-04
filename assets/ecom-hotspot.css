@@ -31,6 +31,8 @@
 /* Desktop small popup css */
 .desktop-small-popup {
     /*display: none;*/
+    position: absolute;
+    z-index: 99;
 }
 
 .desktop-small-popup.active {
