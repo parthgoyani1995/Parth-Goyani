@@ -102,6 +102,7 @@
 .popup-content .popup-variant-swatch
 {
     display: flex;
+    width: 100%;
     column-gap: 10px;
 }
 .popup-content .popup-variant-swatch .popup-item-variant-color
