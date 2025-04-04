@@ -8,6 +8,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 /* Hotspot grid item CSS */
 .ecom-hotspot-item {
     flex: 1 1 calc(33.333% - 20px);
@@ -27,57 +28,3 @@
     transform: translate(-50%, -50%);
     z-index: 9;
 }
-
-/* Desktop small popup css */
-.desktop-small-popup {
-    /*display: none;*/
-    position: absolute;
-    z-index: 99;
-}
-
-.desktop-small-popup.active {
-    display: block;
-}
-
-.desktop-small-popup-content {
-    display: flex;
-    background: #FFF;
-    padding: 10px;
-    max-width: 200px;
-}
-
-.desktop-small-popup-image img {
-    width: 100%;
-}
-
-.desktop-small-popup-text {
-    padding-left: 10px;
-}
-
-.desktop-small-popup-text .product-title {
-    font-size: 16px;
-    margin: 0;
-}
-
-.desktop-small-popup-text .product-price {
-    font-size: 14px;
-    margin: 0;
-}
-
-
-.desktop-hide {
-    display: none;
-}
-
-
-@media (max-width: 768px) {
-
-    .mobile-hide {
-        display: none;
-    }
-
-    .desktop-hide {
-        display: block;
-    }
-}
-
