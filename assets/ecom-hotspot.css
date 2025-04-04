@@ -30,7 +30,7 @@
 
 /* Desktop small popup css */
 .desktop-small-popup {
-    display: none;
+    /*display: none;*/
 }
 
 .desktop-small-popup.active {
