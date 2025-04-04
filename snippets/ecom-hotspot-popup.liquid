@@ -27,7 +27,7 @@
 				<div class="popup-item-variant popup-variant-swatch">
 					{% for value in option.values %}
 						<div class="popup-item-variant-color">
-							<span class="color-code" style="background-color: {{ value | color_name_to_hex }};"></span>
+							<span class="color-code" style="background-color: {{ value | handleize }};"></span>
 							{{ value }}
 						</div>
 					{% endfor %}
