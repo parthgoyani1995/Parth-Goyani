@@ -99,8 +99,14 @@
     letter-spacing: 1px;
 }
 
-.popup-content  .popup-variant-swatch
+.popup-content .popup-variant-swatch
 {
     display: flex;
     column-gap: 10px;
+}
+.popup-content .popup-variant-swatch .popup-item-variant-color
+{
+    padding: 5px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
 }
