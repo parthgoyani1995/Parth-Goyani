@@ -22,10 +22,13 @@
 	<div class="popup-item-variants">
 
 		{% for option in product.options_with_values %}
-
 			{% if option.name == 'Color' %}
 				<div class="popup-item-variant">
-					{{ option.name }}: {{ option.values | join: ', ' }}
+					{% for value in option.values %}
+						<div class="popup-item-variant-color">
+							{{ value }}
+						</div>
+					{% endfor %}
 				</div>
 			{% endif %}
 		{% endfor %}
