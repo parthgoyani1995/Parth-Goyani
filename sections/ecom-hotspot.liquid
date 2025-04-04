@@ -18,10 +18,10 @@
 						{% render 'plus-circle-icon' %}
 					</span>
 					<span class="ecom-hotspot-icon icon-mobile desktop-hide"
-					      style=" left: {{ block.settings.hotspot_left }}%; top: {{ block.settings.hotspot_top }}%;">
+					      style="left: {{ block.settings.hotspot_left }}%; top: {{ block.settings.hotspot_top }}%;">
 						{% render 'plus-circle-icon' %}
 					</span>
-					<div class="desktop-small-popup">
+					<div class="desktop-small-popup" style="left: {{ block.settings.hotspot_left }}%; top: {{ block.settings.hotspot_top }}%;">
 						<div class="desktop-small-popup-content">
 							<div class="desktop-small-popup-image">
 								<img src="{{ block.settings.hotspot_image | image_url: width: 150, height: 150, crop: 'center' }}"
