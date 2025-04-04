@@ -70,12 +70,20 @@
             "hotspot_image": "shopify://shop_images/red-plaid-shirt_925x_70e9e5a8-8fc5-4d60-9a9a-cc2e0dd57cc9.jpg",
             "hotspot_product": "chequered-red-shirt"
           }
+        },
+        "hotspot_37fwFV": {
+          "type": "hotspot",
+          "settings": {
+            "hotspot_image": "shopify://shop_images/leather-jacket-and-tea_925x_2490cde1-7e61-4151-9a65-de8a763bc701.jpg",
+            "hotspot_product": "classic-leather-jacket"
+          }
         }
       },
       "block_order": [
         "hotspot_ayywRk",
         "hotspot_NeQPm3",
-        "hotspot_3VPR39"
+        "hotspot_3VPR39",
+        "hotspot_37fwFV"
       ],
       "settings": {
         "title": "Tisso vison in the wild"
