@@ -70,3 +70,9 @@
 {
     display: block;
 }
+
+.popup-content .product-wrapper
+{
+    display: flex;
+    column-gap: 10px;
+}
