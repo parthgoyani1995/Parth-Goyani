@@ -121,6 +121,11 @@
     position: relative;
     cursor: pointer;
 }
+.popup-content .popup-variant-swatch .popup-item-variant-color.active
+{
+    background-color: #000;
+    color: #fff;
+}
 
 .popup-content .popup-variant-swatch .color-code
 {
