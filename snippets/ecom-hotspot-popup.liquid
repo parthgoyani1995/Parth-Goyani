@@ -19,4 +19,16 @@
 			</div>
 		</div>
 	</div>
+	<div class="popup-item-variants">
+		{% if product.variants.size > 1 %}
+			<div class="popup-item-variant">
+				{% for variant in product.variants %}
+					<div class="popup-item-variant-item">
+						<input type="radio" name="variant" id="variant-{{ variant.id }}" value="{{ variant.id }}">
+						<label for="variant-{{ variant.id }}">{{ variant.title }}</label>
+					</div>
+				{% endfor %}
+			</div>
+		{% endif %}
+	</div>
 </div>
