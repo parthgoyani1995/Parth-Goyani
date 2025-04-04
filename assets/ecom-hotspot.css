@@ -120,12 +120,15 @@
     flex-basis: 50%;
     position: relative;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background: linear-gradient(to right, #000000 50%, #FFFFFF 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.3s ease-out;
 }
 
 .popup-content .popup-variant-swatch .popup-item-variant-color.active
 {
-    background-color: #000;
+    background-position: left bottom;
     color: #fff;
 }
 
