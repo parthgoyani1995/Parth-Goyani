@@ -24,9 +24,6 @@
 	</div>
 	<div class="popup-overlay">
 		<div class="popup-content">
-			<div class="popup-close">
-				{% render 'close-icon' %}
-			</div>
 			{% for block in section.settinga.blocks %}
 				{% render 'ecom-hotspot-popup', popupid:'hotspot-pupup-{{ forloop.index }}', product: block.settings.hotspot_product %}
 			{% endfor %}

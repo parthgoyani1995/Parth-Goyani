@@ -1,4 +1,7 @@
 <div class="popup-item" id="{{ popupid }}">
+	<div class="popup-close">
+		{% render 'close-icon' %}
+	</div>
 	<div class="popup-image">
 		<img src="{{ product.hotspot_image | image_url: width: 450, height: 450, crop: 'center' }}"
 		     alt="Hotspot image"/>
