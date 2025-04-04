@@ -113,8 +113,12 @@
 
 .popup-content .popup-variant-swatch .color-code
 {
-    width: 5px;
+    background-color: black;
     display: inline-block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 .popup-content .popup-variant-swatch .popup-item-variant-color
 {
