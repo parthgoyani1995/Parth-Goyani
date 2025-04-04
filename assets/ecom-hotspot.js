@@ -18,37 +18,27 @@ document.addEventListener("DOMContentLoaded", function ()
     }
 
     /* Dropdown menu */
-    const dropdowns = document.querySelectorAll('.popup-variant-dropdown');
-
-    document.addEventListener('click', function (event)
+    ```javascript
+dropdown.addEventListener('click', function (event)
+{
+    if (!dropdown.contains(event.target))
     {
-        dropdowns.forEach(dropdown =>
-        {
-            if ( !dropdown.contains(event.target) )
-            {
-                dropdown.classList.remove('open');
-            }
-        });
-    });
-
-    dropdowns.forEach(dropdown =>
+        dropdown.classList.remove('open');
+    }
+    else
     {
-        const select = dropdown.querySelector('.popup-item-variant-select');
-        const selected = dropdown.querySelector('.selected-value');
+        dropdown.classList.toggle('open');
+    }
+});
 
-        dropdown.addEventListener('click', function ()
-        {
-            dropdown.classList.toggle('open');
-        });
-
-        select.querySelectorAll('span').forEach(option =>
-        {
-            option.addEventListener('click', function ()
-            {
-                selected.textContent = option.textContent;
-                dropdown.classList.remove('open');
-            });
-        });
+select.querySelectorAll('span').forEach(option =>
+{
+    option.addEventListener('click', function ()
+    {
+        selected.textContent = option.textContent;
+        dropdown.classList.remove('open');
     });
+});
+```
 
 });
