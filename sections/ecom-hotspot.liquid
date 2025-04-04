@@ -1,0 +1,106 @@
+{{ 'ecom-hotspot.css' | asset_url | stylesheet_tag }}
+<style>
+    .ecom-hotspot-container {
+        max-width: {{ section.settings.hotspot_container_width }}px;
+    }
+
+
+
+</style>
+<section class="ecom-hotspot-section">
+	<div class="ecom-hotspot-container">
+		<div class="ecom-hotspot-grid">
+			{% for block in section.blocks %}
+				<div class="ecom-hotspot-item">
+					<img src="{{ block.settings.hotspot_image | image_url: width: 450, height: 450, crop: 'center' }}"
+					     class="ecom-hotspot-image" alt="Hotspot image"/>
+					<span class="ecom-hotspot-icon"
+					      style=" left: {{ block.settings.hotspot_left }}%; top: {{ block.settings.hotspot_top }}%;">
+						{% render 'plus-circle-icon' %}
+					</span>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="popup-overlay">
+		<div class="popup-content">
+			{% for block in section.blocks %}
+				{% render 'ecom-hotspot-popup', popupid:'hotspot-pupup-{{ forloop.index }}', product: block.settings.hotspot_product %}
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+{{ 'ecom-hotspot.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+	"name": "Ecom Hotspot Grid",
+	"settings": [
+		{
+			"type": "range",
+			"id": "hotspot_container_width",
+			"label": "Container Width",
+			"default": 1200,
+			"min": 1000,
+			"max": 1900,
+			"step": 50
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"default": "Tisso vison in the wild"
+		}
+	],
+	"blocks": [
+		{
+			"type": "hotspot",
+			"name": "Hotspot",
+			"limit": 6,
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "hotspot_image",
+					"label": "Hotspot Image"
+				},
+				{
+					"type": "product",
+					"id": "hotspot_product",
+					"label": "Hotspot Product"
+				},
+				{
+					"type": "header",
+					"content": "Hotspot placement"
+				},
+				{
+					"type": "range",
+					"id": "hotspot_left",
+					"label": "Left Position",
+					"default": 50,
+					"min": 0,
+					"max": 100,
+					"step": 1,
+					"unit": "%"
+				},
+				{
+					"type": "range",
+					"id": "hotspot_top",
+					"label": "Top Position",
+					"default": 50,
+					"min": 0,
+					"max": 100,
+					"step": 1,
+					"unit": "%"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Ecom Hotspot Grid",
+			"category": "Custom"
+		}
+	]
+}
+{% endschema %}

@@ -1,0 +1,233 @@
+
+.ecom-hotspot-container {
+    margin: 0 auto;
+}
+
+.ecom-hotspot-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Hotspot grid item CSS */
+.ecom-hotspot-item {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    position: relative;
+}
+
+.ecom-hotspot-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ecom-hotspot-item .ecom-hotspot-icon {
+    cursor: pointer;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+}
+
+/* Hotspot popup item */
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /*display: none;*/
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 311px;
+    width: 100%;
+
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.popup-content .popup-item {
+    display: none;
+}
+
+.popup-content .popup-item:first-child {
+    display: block;
+}
+
+.popup-content .product-wrapper {
+    display: flex;
+    column-gap: 10px;
+}
+
+.popup-content .popup-product-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+    font-weight: 300;
+}
+
+.popup-content .popup-product-price {
+    font-size: 16px;
+    font-family: "Lustria", serif;
+    color: #000;
+    margin-bottom: 13px;
+}
+
+.popup-content .popup-product-description {
+    font-size: 12px;
+    color: #000;
+    font-weight: 300;
+    line-height: 110%;
+    letter-spacing: 1px;
+}
+
+.popup-content .popup-variant-swatch {
+    display: flex;
+    width: 100%;
+}
+
+.popup-content .popup-variant-swatch label {
+    font-size: 14px;
+    color: #000;
+    font-weight: 300;
+}
+.popup-content .popup-item-variants
+{
+    margin-bottom: 30px;
+}
+
+.popup-content .popup-variant-swatch .popup-item-variant-color {
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid #000000;
+    line-height: 1;
+    font-size: 18px;
+    flex-basis: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.popup-content .popup-variant-swatch .popup-item-variant-color.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.popup-content .popup-variant-swatch .color-code {
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    border-right: 0.5px solid #000;
+}
+
+/* Custom Dropdown menu */
+.popup-variant-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-wrapper {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    border: 1px solid #000000;
+}
+
+.dropdown-wrapper .selected-value {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    border-right: 1px solid #000000;
+}
+
+.dropdown-wrapper .dropdown-icon {
+    flex-basis: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.popup-variant-dropdown.open .dropdown-icon {
+    transform: rotate(180deg); /* Rotate arrow when open */
+}
+
+.popup-item-variant-select {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 10;
+}
+
+.popup-item-variant-select span {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.popup-item-variant-select span:hover {
+    background-color: #f0f0f0;
+}
+
+.popup-variant-dropdown.open .popup-item-variant-select {
+    display: block;
+}
+
+.ecom-hotspot-button {
+    display: flex;
+    padding: 5px 20px 5px 40px;
+    text-decoration: none;
+    font-size: 15px;
+    column-gap: 15px;
+    align-items: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #FFF544 50%, #000000 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.3s ease-out;
+    justify-content: center;
+}
+
+.ecom-hotspot-button:hover {
+    background-position: left bottom;
+    color: #000000;
+    box-shadow: 1px 2px 3px #0003, 0 0 4px #00000030;
+}
+
+.ecom-hotspot-button svg {
+    width: 30px;
+}
+
+.ecom-hotspot-button svg path {
+    fill: #fff;
+}
+
+.ecom-hotspot-button:hover svg path {
+    fill: #000;
+}
+
+
