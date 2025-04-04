@@ -49,7 +49,29 @@
     },
     "ecom_hotspot_FycQbm": {
       "type": "ecom-hotspot",
-      "settings": {}
+      "blocks": {
+        "hotspot_ayywRk": {
+          "type": "hotspot",
+          "settings": {
+            "hotspot_image": "shopify://shop_images/black-bag-over-the-shoulder_925x_4cae5708-5e9e-4e7e-96ec-9649f0c20cd8.jpg",
+            "hotspot_product": "black-leather-bag"
+          }
+        },
+        "hotspot_NeQPm3": {
+          "type": "hotspot",
+          "settings": {
+            "hotspot_image": "shopify://shop_images/man-adjusts-blue-tuxedo-bowtie_925x_55a49e12-d54b-488e-b7a0-ea4c201eb01f.jpg",
+            "hotspot_product": "blue-silk-tuxedo"
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_ayywRk",
+        "hotspot_NeQPm3"
+      ],
+      "settings": {
+        "title": "Tisso vison in the wild"
+      }
     }
   },
   "order": [
