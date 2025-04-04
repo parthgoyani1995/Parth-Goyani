@@ -208,7 +208,7 @@
 }
 .ecom-hotspot-button:hover {
     background-position: left bottom;
-    color: #FFFFFF;
+    color: #000000;
     box-shadow: 1px 2px 3px #0003, 0 0 4px #00000030;
 }
 
