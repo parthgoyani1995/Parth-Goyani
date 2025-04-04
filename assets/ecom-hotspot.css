@@ -50,15 +50,15 @@
 }
 
 .desktop-small-popup-text {
-    padding: 10px;
+    padding-left: 10px;
 }
 
-.desktop-small-popup-text h3 {
+.desktop-small-popup-text .product-title {
     font-size: 16px;
     margin: 0;
 }
 
-.desktop-small-popup-text p {
+.desktop-small-popup-text .product-price {
     font-size: 14px;
     margin: 0;
 }
