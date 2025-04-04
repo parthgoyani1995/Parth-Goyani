@@ -63,3 +63,10 @@
     right: 10px;
     cursor: pointer;
 }
+.popup-content .popup-item{
+    display: none;
+}
+.popup-content .popup-item:first-child
+{
+    display: block;
+}
