@@ -2,19 +2,21 @@
 	<div class="popup-close">
 		{% render 'close-icon' %}
 	</div>
-	<div class="popup-image">
-		<img src="{{ product.featured_image | image_url: width: 120, height: 140, crop: 'center' }}"
-		     alt="Hotspot image"/>
-	</div>
-	<div class="popup-product">
-		<div class="popup-product-title">
-			{{ product.title }}
+	<div class="product-wrapper">
+		<div class="popup-image">
+			<img src="{{ product.featured_image | image_url: width: 120, height: 140, crop: 'center' }}"
+			     alt="Hotspot image"/>
 		</div>
-		<div class="popup-product-price">
-			{{ product.price | money }}
-		</div>
-		<div class="popup-product-description">
-			{{ product.description | strip_html | truncatewords: 20 }}
+		<div class="popup-product">
+			<div class="popup-product-title">
+				{{ product.title }}
+			</div>
+			<div class="popup-product-price">
+				{{ product.price | money }}
+			</div>
+			<div class="popup-product-description">
+				{{ product.description | strip_html | truncatewords: 20 }}
+			</div>
 		</div>
 	</div>
 </div>
