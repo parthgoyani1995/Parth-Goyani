@@ -33,18 +33,19 @@
 					{% endfor %}
 				</div>
 			{% endif %}
-		{% endfor %}
-		{% for option in product.options %}
-			{% if option.name == 'Size' %}
-				<div class="popup-item-variant popup-variant-dropdown">
-					<label>Size</label>
-					<select class="popup-item-variant-select">
-						{% for value in option.values %}
-							<option value="{{ value }}">{{ value }}</option>
-						{% endfor %}
-					</select>
-				</div>
-			{% endif %}
+
+			{% for option in product.options %}
+				{% if option.name == 'Size' %}
+					<div class="popup-item-variant popup-variant-dropdown">
+						<label>Size</label>
+						<select class="popup-item-variant-select">
+							{% for value in option.values %}
+								<option value="{{ value }}">{{ value }}</option>
+							{% endfor %}
+						</select>
+					</div>
+				{% endif %}
+			{% endfor %}
 		{% endfor %}
 	</div>
 </div>
