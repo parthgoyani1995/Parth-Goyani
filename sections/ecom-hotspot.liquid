@@ -11,7 +11,10 @@
 				<div class="ecom-hotspot-item">
 					<img src="{{ block.settings.hotspot_image | image_url: width: 450, height: 450, crop: 'center' }}"
 					     class="ecom-hotspot-image" alt="Hotspot image"/>
-					<span class="ecom-hotspot-icon" style=" left: {{ block.settings.hotspot_left }}%; top: {{ block.settings.hotspot_top }}%;">
+					<span class="ecom-hotspot-icon icon-desktop" style=" left: {{ block.settings.hotspot_left }}%; top: {{ block.settings.hotspot_top }}%;">
+						{% render 'plus-circle-icon' %}
+					</span>
+					<span class="ecom-hotspot-icon icon-desktop" style=" left: {{ block.settings.hotspot_left }}%; top: {{ block.settings.hotspot_top }}%;">
 						{% render 'plus-circle-icon' %}
 					</span>
 				</div>
