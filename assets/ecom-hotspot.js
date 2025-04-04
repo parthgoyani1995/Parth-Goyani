@@ -1,47 +1,34 @@
-document.addEventListener("DOMContentLoaded", function ()
+document.addEventListener("DOMContentLoaded", () =>
 {
-    let popupItemVariantColor = document.querySelectorAll(".popup-item-variant-color");
-    if ( popupItemVariantColor.length > 0 )
+    const popupItemVariantColor = document.querySelectorAll(".popup-item-variant-color");
+    popupItemVariantColor.forEach(item =>
     {
-        popupItemVariantColor.forEach(function (item)
+        item.addEventListener("click", () =>
         {
-            item.addEventListener("click", function ()
+            const activeItem = document.querySelector(".popup-item-variant-color.active");
+            if ( activeItem )
             {
-                var activeItem = document.querySelector(".popup-item-variant-color.active");
-                if ( activeItem )
-                {
-                    activeItem.classList.remove("active");
-                }
-                this.classList.add("active");
-            });
+                activeItem.classList.remove("active");
+            }
+            item.classList.add("active");
         });
-    }
+    });
 
-    /* Dropdown menu */
     const dropdowns = document.querySelectorAll('.popup-variant-dropdown');
-
-
     dropdowns.forEach(dropdown =>
     {
         const select = dropdown.querySelector('.popup-item-variant-select');
         const selected = dropdown.querySelector('.selected-value');
 
-        dropdown.addEventListener('click', function ()
+        dropdown.addEventListener('click', () =>
         {
-            if ( !dropdown.classList.contains('open') )
-            {
-                dropdowns.forEach(d => d.classList.remove('open'));
-                dropdown.classList.add('open');
-            }
-            else
-            {
-                dropdown.classList.remove('open');
-            }
+            dropdowns.forEach(d => d.classList.remove('open'));
+            dropdown.classList.toggle('open');
         });
 
         select.querySelectorAll('span').forEach(option =>
         {
-            option.addEventListener('click', function (event)
+            option.addEventListener('click', event =>
             {
                 event.stopPropagation();
                 selected.textContent = option.textContent;
