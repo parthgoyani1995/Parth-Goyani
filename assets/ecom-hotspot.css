@@ -1,6 +1,5 @@
 
-.ecom-hotspot-container
-{
+.ecom-hotspot-container {
     margin: 0 auto;
 }
 
@@ -9,6 +8,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+/* Hotspot grid item CSS */
 .ecom-hotspot-item {
     flex: 1 1 calc(33.333% - 20px);
     margin: 10px;
@@ -21,12 +21,47 @@
     display: block;
 }
 
-.ecom-hotspot-item .ecom-hotspot-icon
-{
+.ecom-hotspot-item .ecom-hotspot-icon {
     cursor: pointer;
     position: absolute;
     transform: translate(-50%, -50%);
     z-index: 9;
+}
+
+/* Desktop small popup css */
+.desktop-small-popup {
+    display: none;
+}
+
+.desktop-small-popup.active {
+    display: block;
+}
+
+.desktop-small-popup-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.desktop-small-popup-image {
+    width: 100%;
+}
+
+.desktop-small-popup-image img {
+    width: 100%;
+}
+
+.desktop-small-popup-text {
+    padding: 10px;
+}
+
+.desktop-small-popup-text h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.desktop-small-popup-text p {
+    font-size: 14px;
+    margin: 0;
 }
 
 
