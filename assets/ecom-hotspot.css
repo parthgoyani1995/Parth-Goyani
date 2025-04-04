@@ -1,3 +1,9 @@
+
+.ecom-hotspot-container
+{
+    margin: 0 auto;
+}
+
 .ecom-hotspot-grid {
     display: flex;
     flex-wrap: wrap;
