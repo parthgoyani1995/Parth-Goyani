@@ -1,3 +1,35 @@
+
+.ecom-hotspot-container {
+    margin: 0 auto;
+}
+
+.ecom-hotspot-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Hotspot grid item CSS */
+.ecom-hotspot-item {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    position: relative;
+}
+
+.ecom-hotspot-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ecom-hotspot-item .ecom-hotspot-icon {
+    cursor: pointer;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+}
+
+/* Hotspot popup item */
 /* Hotspot popup item */
 .popup-overlay {
     position: fixed;
