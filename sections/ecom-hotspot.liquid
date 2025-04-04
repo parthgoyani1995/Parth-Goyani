@@ -24,7 +24,7 @@
 	</div>
 	<div class="popup-overlay">
 		<div class="popup-content">
-			{% for block in section.settinga.blocks %}
+			{% for block in section.settings.blocks %}
 				{% render 'ecom-hotspot-popup', popupid:'hotspot-pupup-{{ forloop.index }}', product: block.settings.hotspot_product %}
 			{% endfor %}
 		</div>
