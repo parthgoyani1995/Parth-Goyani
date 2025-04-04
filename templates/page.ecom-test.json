@@ -77,13 +77,21 @@
             "hotspot_image": "shopify://shop_images/leather-jacket-and-tea_925x_2490cde1-7e61-4151-9a65-de8a763bc701.jpg",
             "hotspot_product": "classic-leather-jacket"
           }
+        },
+        "hotspot_jybpeq": {
+          "type": "hotspot",
+          "settings": {
+            "hotspot_image": "shopify://shop_images/casual-fashion-woman_925x_56b56608-f207-45c1-b677-bb5aa26c1c7a.jpg",
+            "hotspot_product": "classic-varsity-top"
+          }
         }
       },
       "block_order": [
         "hotspot_ayywRk",
         "hotspot_NeQPm3",
         "hotspot_3VPR39",
-        "hotspot_37fwFV"
+        "hotspot_37fwFV",
+        "hotspot_jybpeq"
       ],
       "settings": {
         "title": "Tisso vison in the wild"
