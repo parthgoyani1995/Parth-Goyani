@@ -38,11 +38,11 @@
 			{% if option.name == 'Size' %}
 				<div class="popup-item-variant popup-variant-dropdown">
 					<label>Size</label>
-					<select class="popup-item-variant-select">
+					<div class="popup-item-variant-select">
 						{% for value in option.values %}
-							<option value="{{ value }}">{{ value }}</option>
+							<span data-value="{{ value }}">{{ value }}</span>
 						{% endfor %}
-					</select>
+					</div>
 				</div>
 			{% endif %}
 		{% endfor %}
