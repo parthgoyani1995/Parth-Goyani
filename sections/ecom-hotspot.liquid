@@ -1,7 +1,12 @@
 {{ 'ecom-hotspot.css' | asset_url | stylesheet_tag }}
+<style>
+    .ecom-hotspot-container {
+        max-width: {{ section.settings.hotspot_container_width }}px;
+    }
+</style>
 <section class="ecom-hotspot-section">
 	<div class="ecom-hotspot-container">
-		
+
 	</div>
 </section>
 {{ 'ecom-hotspot.js' | asset_url | stylesheet_tag }}
@@ -10,6 +15,15 @@
 {
 	"name": "Ecom Hotspot Grid",
 	"settings": [
+		{
+			"type": "range",
+			"id": "hotspot_container_width",
+			"label": "Container Width",
+			"default": 1200,
+			"min": 1000,
+			"max": 1900,
+			"step": 50
+		},
 		{
 			"type": "text",
 			"id": "title",
