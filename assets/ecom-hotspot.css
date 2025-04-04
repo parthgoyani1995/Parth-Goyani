@@ -114,6 +114,7 @@
 .popup-content .popup-variant-swatch .color-code
 {
     width: 5px;
+    display: inline-block;
 }
 .popup-content .popup-variant-swatch .popup-item-variant-color
 {
