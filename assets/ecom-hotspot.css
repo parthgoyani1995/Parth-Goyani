@@ -154,7 +154,7 @@
 .dropdown-wrapper .selected-value
 {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     border-right: 1px solid #000000;
 }
