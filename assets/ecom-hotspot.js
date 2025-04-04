@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function ()
 {
-
     let popupItemVariantColor = document.querySelectorAll(".popup-item-variant-color");
     if ( popupItemVariantColor.length > 0 )
     {
@@ -17,18 +16,14 @@ document.addEventListener("DOMContentLoaded", function ()
             });
         });
     }
-
-    /* drop down menu */
-
+                
+    /* Dropdown menu */
     const dropdowns = document.querySelectorAll('.popup-variant-dropdown');
 
     dropdowns.forEach(dropdown =>
     {
         const select = dropdown.querySelector('.popup-item-variant-select');
-        const selected = document.createElement('div');
-        selected.className = 'selected-value';
-        selected.textContent = select.querySelector('span').textContent;
-        dropdown.insertBefore(selected, select);
+        const selected = dropdown.querySelector('.selected-value');
 
         dropdown.addEventListener('click', function ()
         {
@@ -55,5 +50,4 @@ document.addEventListener("DOMContentLoaded", function ()
             }
         });
     });
-
 });
