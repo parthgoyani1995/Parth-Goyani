@@ -208,7 +208,9 @@
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all 0.3s ease-out;
+    justify-content: center;
 }
+
 .ecom-hotspot-button:hover {
     background-position: left bottom;
     color: #000000;
