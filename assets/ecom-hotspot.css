@@ -171,7 +171,7 @@
 }
 
 .popup-variant-dropdown.open .dropdown-icon {
-    transform: translateY(-50%) rotate(180deg); /* Rotate arrow when open */
+    transform: rotate(180deg); /* Rotate arrow when open */
 }
 
 .popup-item-variant-select {
