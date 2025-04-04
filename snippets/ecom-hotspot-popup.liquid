@@ -36,7 +36,10 @@
 		            {% if option.name == 'Size' %}
 		                <div class="popup-item-variant popup-variant-dropdown">
 		                    <label>Size</label>
-		                    <div class="selected-value">{{ product.options_with_values[0].values[0] }}</div>
+			                <div class="dropdown-wrapper">
+		                        <div class="selected-value">{{ product.options_with_values[0].values[0] }}</div>
+				                {% render 'dropdown-icon' %}
+			                </div>
 		                    <div class="popup-item-variant-select">
 		                        {% for value in option.values %}
 		                            <span data-value="{{ value }}">{{ value }}</span>
