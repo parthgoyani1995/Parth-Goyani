@@ -1,13 +1,13 @@
-<div class="popup-item">
-					<div class="popup-image">
-						<img src="{{ block.settings.hotspot_image | image_url: width: 450, height: 450, crop: 'center' }}"
-						     alt="Hotspot image"/>
-					</div>
-					<div class="popup-product">
-						{% if block.settings.hotspot_product %}
-							<a href="{{ block.settings.hotspot_product.url }}">
-								{{ block.settings.hotspot_product.title }}
-							</a>
-						{% endif %}
-					</div>
-				</div>
+<div class="popup-item" id="{{ popupid }}">
+	<div class="popup-image">
+		<img src="{{ block.settings.hotspot_image | image_url: width: 450, height: 450, crop: 'center' }}"
+		     alt="Hotspot image"/>
+	</div>
+	<div class="popup-product">
+		{% if block.settings.hotspot_product %}
+			<a href="{{ block.settings.hotspot_product.url }}">
+				{{ block.settings.hotspot_product.title }}
+			</a>
+		{% endif %}
+	</div>
+</div>
