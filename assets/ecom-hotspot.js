@@ -20,16 +20,6 @@ document.addEventListener("DOMContentLoaded", function ()
     /* Dropdown menu */
     const dropdowns = document.querySelectorAll('.popup-variant-dropdown');
 
-    document.addEventListener('click', function (event)
-    {
-        dropdowns.forEach(dropdown =>
-        {
-            if ( !dropdown.contains(event.target) )
-            {
-                dropdown.classList.remove('open');
-            }
-        });
-    });
 
     dropdowns.forEach(dropdown =>
     {
