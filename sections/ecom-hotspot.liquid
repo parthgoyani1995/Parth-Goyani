@@ -22,6 +22,24 @@
 		</div>
 	</div>
 </section>
+<div class="popup-overlay">
+	<div class="popup-content">
+		<div class="popup-close">
+			{% render 'close-icon' %}
+		</div>
+		<div class="popup-product">
+			<div class="popup-product-image">
+				<img src="" alt="Product Image" id="popup-product-image"/>
+			</div>
+			<div class="popup-product-info">
+				<h2 id="popup-product-title"></h2>
+				<p id="popup-product-price"></p>
+				<a href="#" id="popup-product-link" class="btn">View Product</a>
+			</div>
+		</div>
+	</div>
+
+</div>
 {{ 'ecom-hotspot.js' | asset_url | stylesheet_tag }}
 
 {% schema %}
