@@ -103,7 +103,6 @@
 {
     display: flex;
     width: 100%;
-    column-gap: 10px;
 }
 .popup-content .popup-variant-swatch label{
     font-size: 14px;
