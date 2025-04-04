@@ -33,7 +33,8 @@
 					{% endfor %}
 				</div>
 			{% endif %}
-		
+		{% endfor %}
+		{% for option in product.options_with_values %}
 			{% if option.name == 'Size' %}
 				<div class="popup-item-variant popup-variant-dropdown">
 					<label>Size</label>
