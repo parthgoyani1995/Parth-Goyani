@@ -4,6 +4,32 @@
         max-width: {{ section.settings.hotspot_container_width }}px;
     }
 
+    .popup-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		display: none;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.popup-content {
+		background-color: #fff;
+		padding: 20px;
+		border-radius: 10px;
+		position: relative;
+	}
+
+	.popup-close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		cursor: pointer;
+	}
+
 
 </style>
 <section class="ecom-hotspot-section">
@@ -21,24 +47,18 @@
 			{% endfor %}
 		</div>
 	</div>
-</section>
-<div class="popup-overlay">
-	<div class="popup-content">
-		<div class="popup-close">
-			{% render 'close-icon' %}
-		</div>
-		<div class="popup-product">
-			<div class="popup-product-image">
-				<img src="" alt="Product Image" id="popup-product-image"/>
+	<div class="popup-overlay">
+		<div class="popup-content">
+			<div class="popup-close">
+				{% render 'close-icon' %}
 			</div>
-			<div class="popup-product-info">
-				<h2 id="popup-product-title"></h2>
-				<p id="popup-product-price"></p>
-				<a href="#" id="popup-product-link" class="btn">View Product</a>
-			</div>
+			{% for block in section.settinga.blocks %}
+				{% render 'ecom-hotspot-popup', popupid:'hotspot-pupup-{{ forloop.index }}', product: block.settings.hotspot_product %}
+			{% endfor %}
 		</div>
 	</div>
-</div>
+</section>
+
 {{ 'ecom-hotspot.js' | asset_url | stylesheet_tag }}
 
 {% schema %}
