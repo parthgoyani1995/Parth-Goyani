@@ -120,6 +120,7 @@
     font-size: 18px;
     flex-basis: 50%;
     position: relative;
+    cursor: pointer;
 }
 
 .popup-content .popup-variant-swatch .color-code
