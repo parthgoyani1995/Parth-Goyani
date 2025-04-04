@@ -41,8 +41,9 @@ document.addEventListener("DOMContentLoaded", function ()
 
         select.querySelectorAll('span').forEach(option =>
         {
-            option.addEventListener('click', function ()
+            option.addEventListener('click', function (event)
             {
+                event.stopPropagation();
                 selected.textContent = option.textContent;
                 dropdown.classList.remove('open');
             });
