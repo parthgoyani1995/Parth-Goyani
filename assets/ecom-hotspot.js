@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function ()
             });
         });
     }
-                
+
     /* Dropdown menu */
     const dropdowns = document.querySelectorAll('.popup-variant-dropdown');
 
