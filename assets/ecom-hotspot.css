@@ -125,9 +125,7 @@
 }
 
 .popup-content .popup-variant-swatch .popup-item-variant-color.active {
-    background-color: #000;
     color: #fff;
-    z-index: 2;
 }
 
 .popup-content .popup-variant-swatch::before {
