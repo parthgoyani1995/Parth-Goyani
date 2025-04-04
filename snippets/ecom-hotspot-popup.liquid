@@ -23,7 +23,7 @@
 
 		{% for option in product.options_with_values %}
 			{% if option.name == 'Color' %}
-				<div class="popup-item-variant">
+				<div class="popup-item-variant popup-variant-swatch">
 					{% for value in option.values %}
 						<div class="popup-item-variant-color">
 							{{ value }}
