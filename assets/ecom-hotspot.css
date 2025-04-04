@@ -199,6 +199,7 @@
     font-size: 20px;
     column-gap: 15px;
     align-items: center;
+    color: #FFFFFF;
     text-transform: uppercase;
     background: linear-gradient(to right, #FFF544 50%, #000000 50%);
     background-size: 200% 100%;
