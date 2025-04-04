@@ -21,7 +21,7 @@
 	</div>
 	<div class="popup-item-variants">
 
-		{% for option in product.options %}
+		{% for option in product.options_with_values %}
 			option.name == {{  option.name }}
 			{% if option.name == 'Color' %}
 				<div class="popup-item-variant">
