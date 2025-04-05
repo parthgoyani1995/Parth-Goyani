@@ -96,6 +96,7 @@ document.addEventListener("DOMContentLoaded", () =>
         {
             // get value of .ecom-variants by matching text like 'size - color'
             const selectedVariant = selectedSize + " / " + selectedVariantColor.innerText;
+            // match selectedVariant with options in .ecom-variants and get 
             console.log("Selected variant: ", selectedVariant);
         }
     }
