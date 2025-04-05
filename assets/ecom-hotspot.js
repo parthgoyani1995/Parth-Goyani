@@ -9,8 +9,13 @@ document.addEventListener("DOMContentLoaded", () =>
         icon.addEventListener("click", (event) =>
         {
             event.preventDefault();
+            // get the data from the icon
+            const data = icon.dataset.hotspotid;
+
+
             // Show the popup
             popup.classList.add("active");
+
         });
     });
 
