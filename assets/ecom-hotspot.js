@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () =>
         {
             cartButton.classList.remove("ecom-hidden");
         }
-        fetch('/cart/add.js', {
+        await fetch('/cart/add.js', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
