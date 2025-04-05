@@ -224,6 +224,11 @@
     width: 100%;
 }
 
+.popup-item-out-of-stock
+{
+    cursor: no-drop !important;
+}
+
 .ecom-hotspot-button:hover {
     background-position: left bottom;
     color: #000000;
