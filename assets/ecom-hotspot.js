@@ -142,6 +142,7 @@ document.addEventListener("DOMContentLoaded", () =>
     {
         button.addEventListener("click", (event) =>
         {
+            console.log("Adding to cart");
             event.preventDefault();
             let variantID = getSelectedVariant();
             console.log("Adding to cart: " + variantID);
