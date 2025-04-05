@@ -96,8 +96,22 @@ document.addEventListener("DOMContentLoaded", () =>
         {
             // get value of .ecom-variants by matching text like 'size - color'
             const selectedVariant = selectedSize + " / " + selectedVariantColor.innerText;
-            // match selectedVariant with options in .ecom-variants and get 
-            console.log("Selected variant: ", selectedVariant);
+            // match selectedVariant with options in .ecom-variants and get data-qty and value
+            const ecomVariants = document.querySelectorAll(".ecom-variants .ecom-variant");
+            ecomVariants.forEach(variant =>
+            {
+                const variantText = variant.innerText;
+                if ( variantText === selectedVariant )
+                {
+                    const qty = variant.dataset.qty;
+                    const value = variant.dataset.value;
+                    // set the value and qty in the form
+                    const inputQty = document.querySelector(".ecom-qty");
+                    inputQty.value = qty;
+                    const inputValue = document.querySelector(".ecom-value");
+                    inputValue.value = value;
+                }
+            });
         }
     }
 
