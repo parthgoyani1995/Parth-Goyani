@@ -221,7 +221,10 @@ document.addEventListener("DOMContentLoaded", () =>
             // get text for selected option
             const selectedVariantText = activeItem.querySelector(".ecom-variants option:checked").innerText;
             ecomAddToCart(selectedVariantId, cartButton);
-            if ( selectedVariantText == ('M') )
+            if ( selectedVariantText === 'M / Black')
+            {
+                
+            }
         });
     });
 });
