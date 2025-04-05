@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () =>
 
     if ( selectedSize && selectedVariantColor )
     {
-        get value of 
+        get value of .ecom-variants by matching text like 
     }
 
 });
