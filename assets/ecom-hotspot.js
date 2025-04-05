@@ -93,9 +93,26 @@ document.addEventListener("DOMContentLoaded", () =>
         {
             // get value of .ecom-variants by matching text like 'size - color'
             const selectedVariant = selectedSize + " - " + selectedVariantColor.innerText;
+            console.log("Selected variant: ", selectedVariant);
         }
     }
 
-    popup-item-variant-color click and 
+    // getSelectedVariant on click of popup-item-variant-color  and popup-item-variant-select
+    popupItemVariantColor.forEach(item =>
+    {
+        item.addEventListener("click", () =>
+        {
+            getSelectedVariant();
+        });
+    });
+    dropdowns.forEach(dropdown =>
+    {
+        const select = dropdown.querySelector('.popup-item-variant-select');
+        select.addEventListener('click', () =>
+        {
+            getSelectedVariant();
+        });
+    });
+
 
 });
