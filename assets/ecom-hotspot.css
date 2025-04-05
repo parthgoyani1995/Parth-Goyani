@@ -2,6 +2,10 @@
 {
     display: none !important;
 }
+.ecom-hotspot-section
+{
+    padding: 50px 0px;
+}
 .ecom-hotspot-container {
     margin: 0 auto;
 }
