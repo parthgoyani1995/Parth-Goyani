@@ -25,7 +25,7 @@
 	<div class="popup-overlay active">
 		<div class="popup-content">
 			{% for block in section.blocks %}
-				{% render 'ecom-hotspot-popup', popupid:'hotspot-pupup-{{ forloop.index }}', product: block.settings.hotspot_product %}
+				{% render 'ecom-hotspot-popup', popupid:'hotspot-pupup-'{{ forloop.index }}, product: block.settings.hotspot_product %}
 			{% endfor %}
 		</div>
 	</div>
