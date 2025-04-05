@@ -105,11 +105,6 @@ document.addEventListener("DOMContentLoaded", () =>
                 {
                     const qty = variant.dataset.qty;
                     const value = variant.dataset.value;
-                    // set the value and qty in the form
-                    const inputQty = document.querySelector(".ecom-qty");
-                    inputQty.value = qty;
-                    const inputValue = document.querySelector(".ecom-value");
-                    inputValue.value = value;
                 }
             });
         }
