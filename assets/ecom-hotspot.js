@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () =>
         const popupContent = document.querySelector(".popup-content");
         if ( popup.classList.contains("active") && !popupContent.contains(event.target) && !closePopup.contains(event.target) )
         {
-            // popup.classList.remove("active");
+            popup.classList.remove("active");
         }
     });
 
