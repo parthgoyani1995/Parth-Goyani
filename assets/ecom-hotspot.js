@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () =>
     });
 
     // close popup when clicking on X
-    const closePopup = document.querySelector(".close-popup");
+    const closePopup = document.querySelector(".popup-close");
     closePopup.addEventListener("click", () =>
     {
         const popup = document.querySelector(".popup");
