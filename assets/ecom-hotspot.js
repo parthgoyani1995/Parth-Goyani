@@ -84,7 +84,12 @@ document.addEventListener("DOMContentLoaded", () =>
 
 
     // Select appropriate variant in ecom-variants
-    
+    // Get selected popup-item-variant-color
+    const selectedVariantColor = document.querySelector(".popup-item-variant-color.active");
+    // Get selected popup-item-variant-select
+    const selectedVariantSelect = document.querySelector(".popup-item-variant-select.active");
+
+
 
 
 });
