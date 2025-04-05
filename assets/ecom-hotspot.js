@@ -130,9 +130,16 @@ document.addEventListener("DOMContentLoaded", () =>
         });
     });
 
-    active item .popup-item-cart-button click
-    const activeItem = document.querySelector(".popup-item-variant-color.active");
+
+    // Add to cart feature
+
+    const activeItem = document.querySelector(".popup-item.active");
     const cartButton = activeItem.querySelector(".popup-item-cart-button");
+    cartButton.addEventListener("click", (event) =>
+    {
+        event.preventDefault();
+        
+    });
 
 
 
