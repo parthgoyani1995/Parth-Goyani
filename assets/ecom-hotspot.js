@@ -135,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () =>
 
     const activeItem = document.querySelector(".popup-item.active");
     const cartButton = activeItem.querySelector(".popup-item-cart-button");
+    console.log("cartButton", cartButton);
     cartButton.addEventListener("click", (event) =>
     {
         event.preventDefault();
