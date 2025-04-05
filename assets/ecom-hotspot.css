@@ -249,3 +249,13 @@
 }
 
 
+@media (max-width: 768px) {
+
+    .ecom-hotspot-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    .popup-content {
+        max-width: 90%;
+    }
+}
