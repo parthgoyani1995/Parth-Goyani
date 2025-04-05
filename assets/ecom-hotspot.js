@@ -158,7 +158,6 @@ document.addEventListener("DOMContentLoaded", () =>
             const currentCount = parseInt(cartCount.innerText);
             cartCount.innerText = currentCount + 1;
         }
-        return true;
     }
 
     function ecomAddToCart(selectedVariantId, cartButton = null)
@@ -181,13 +180,12 @@ document.addEventListener("DOMContentLoaded", () =>
             .then(data =>
             {
                 console.log('Success:', data);
-                let handleResponse = handleSuccess(data, cartButton);
+                handleSuccess(data, cartButton);
             })
             .catch((error) =>
             {
                 console.error('Error:', error);
             });
-        return true;
     }
 
 
@@ -224,9 +222,8 @@ document.addEventListener("DOMContentLoaded", () =>
             const selectedVariantId = activeItem.querySelector(".ecom-variants").value;
             // get text for selected option
             const selectedVariantText = activeItem.querySelector(".ecom-variants option:checked").innerText;
+            ecomAddToCart(selectedVariantId, cartButton);
             console.log("Selected variant text: " + selectedVariantText);
-            let response = ecomAddToCart(selectedVariantId, cartButton);
-
             // Add Complementary product if selectedVariantText is Medium / Black
             if ( selectedVariantText === 'Medium / Black' )
             {
