@@ -90,7 +90,8 @@ document.addEventListener("DOMContentLoaded", () =>
 
     if ( selectedSize && selectedVariantColor )
     {
-        // get value of .ecom-variants by matching text like size -  
+        // get value of .ecom-variants by matching text like 'size - color'
+        const selectedVariant = selectedSize + " - " + selectedVariantColor.innerText;
     }
 
 });
