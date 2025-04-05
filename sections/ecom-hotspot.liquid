@@ -25,6 +25,9 @@
 			<div class="popup-close">
 				{% render 'close-icon' %}
 			</div>
+			<div class="hotspot_complementary_product ecom-hidden"
+			     data-variantid="{{ section.settings.hotspot__product.selected_or_first_available_variant.id }}"
+			></div>
 			{% for block in section.blocks %}
 				{% assign popupid = block.id | handleize %}
 				{% render 'ecom-hotspot-popup', popupid: popupid, product: block.settings.hotspot_product %}
