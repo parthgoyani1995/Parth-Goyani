@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () =>
 {
+
+    // Custom variant selection JS.
     const popupItemVariantColor = document.querySelectorAll(".popup-item-variant-color");
     popupItemVariantColor.forEach(item =>
     {
@@ -36,4 +38,13 @@ document.addEventListener("DOMContentLoaded", () =>
             });
         });
     });
+
+    // close popup when clicking on X
+    const closePopup = document.querySelector(".close-popup");
+    closePopup.addEventListener("click", () =>
+    {
+        const popup = document.querySelector(".popup");
+        popup.classList.remove("open");
+    });
+
 });
