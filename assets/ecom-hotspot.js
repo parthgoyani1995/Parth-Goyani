@@ -92,8 +92,11 @@ document.addEventListener("DOMContentLoaded", () =>
         const selectedVariantColor = activeItem.querySelector(".popup-item-variant-color.active");
         const selectedSize = activeItem.querySelector(".selected-value").innerText;
 
-        if ( selectedSize && selectedVariantColor )
+        if (!selectedVariantColor && !selectedSize)
         {
+            
+            return;
+        }
             // get value of .ecom-variants by matching text like 'size - color'
             const selectedVariant = selectedSize + " / " + selectedVariantColor.innerText;
             // match selectedVariant with options in .ecom-variants and get data-qty and value
@@ -119,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () =>
                     }
                 }
             });
-        }
+
     }
 
     // getSelectedVariant on click of popup-item-variant-color  and popup-item-variant-select
