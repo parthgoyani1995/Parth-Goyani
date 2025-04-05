@@ -150,13 +150,6 @@ document.addEventListener("DOMContentLoaded", () =>
             cartMessage.classList.add("ecom-hidden");
         }, 3000);
 
-
-
-        setTimeout(() =>
-        {
-            // message.remove();
-        }, 3000);
-
         const cartCount = document.querySelector(".cart-count");
         if ( !cartCount )
         {
@@ -203,6 +196,28 @@ document.addEventListener("DOMContentLoaded", () =>
 
 
             const activeItem = document.querySelector(".popup-item.active");
+            const selectedVariantColor = activeItem.querySelector(".popup-item-variant-color.active");
+            const selectedSize = activeItem.querySelector(".selected-value").innerText;
+            if ( !selectedSize || !selectedVariantColor )
+            {
+                console.error("Please select a variant");
+                return;
+            }
+            {
+            let cartMessage = cartButton.parentElement.querySelector(".popup-item-cart-message");
+            if ( !cartMessage )
+            {
+                console.error("Cart message element not found");
+                return;
+            }
+            cartMessage.classList.remove("ecom-hidden");
+            cartMessage.innerText = "Item added to cart";
+            // remove message after 3 seconds
+            setTimeout(() =>
+            {
+                cartMessage.classList.add("ecom-hidden");
+            }, 3000);
+
             const selectedVariantId = activeItem.querySelector(".ecom-variants").value;
             const cartButton = event.currentTarget;
             ecomAddToCart(selectedVariantId, cartButton)
