@@ -73,7 +73,8 @@
     display: none;
 }
 
-.popup-content .popup-item:first-child {
+.popup-content .popup-item.active
+{
     display: block;
 }
 
