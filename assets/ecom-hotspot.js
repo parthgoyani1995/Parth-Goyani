@@ -133,26 +133,37 @@ document.addEventListener("DOMContentLoaded", () =>
 
     // Add to cart feature
 
-    const activeItem = document.querySelector(".popup-item.active");
-    const cartButton = activeItem.querySelector(".popup-item-cart-button");
-    console.log("cartButton", cartButton);
-    cartButton.addEventListener("click", (event) =>
+    const cartButtons = document.querySelector(".popup-item-cart-button");
+    cartButtons.addEventListener("click", (event) =>
     {
         event.preventDefault();
-        // get closest from and log serialize form
-        const form = activeItem.querySelector("form");
-        console.log("form", form);
-        const formData = new FormData(form);
-        const data = {};
-        formData.forEach((value, key) =>
+        const activeItem = document.querySelector(".popup-item.active");
+        const selectedVariantColor = activeItem.querySelector(".popup-item-variant-color.active");
+        const selectedSize = activeItem.querySelector(".selected-value").innerText;
+
+        if ( selectedSize && selectedVariantColor )
         {
-            data[key] = value;
-        });
-        // log data
-        console.log("formData", data);
-
-
+            // get value of .ecom-variants by matching text like 'size - color'
+            const selectedVariant = selectedSize + " / " + selectedVariantColor.innerText;
+            // match selectedVariant with options in .ecom-variants and get data-qty and value
+            const ecomVariants = activeItem.querySelectorAll(".ecom-variants option");
+            ecomVariants.forEach(variant =>
+            {
+                const variantText = variant.innerText;
+                if ( variantText === selectedVariant )
+                {
+                    const qty = parseInt(variant.dataset.qty);
+                    const outOfStock = activeItem.querySelector(".popup-item-out-of-stock");
+                    if ( qty > 0 )
+                    {
+                        // add to cart
+                        alert("Added to cart: " + variant.value);
+                    }
+                }
+            });
+        }
     });
+
 
 
 
