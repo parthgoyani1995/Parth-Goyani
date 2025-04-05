@@ -223,6 +223,10 @@ document.addEventListener("DOMContentLoaded", () =>
             ecomAddToCart(selectedVariantId, cartButton);
             if ( selectedVariantText === 'M / Black')
             {
+                // add .hotspot_complementary_product in cart ttoo
+                // get data from .hotspot_complementary_product
+                const complementaryProduct = document.querySelector(".hotspot_complementary_product");
+                const complementaryProductVariantId = complementaryProduct.dataset.variantid;
 
             }
         });
