@@ -116,6 +116,10 @@ document.addEventListener("DOMContentLoaded", () =>
                         outOfStock.classList.add("ecom-hidden");
                         cartButton.classList.remove("ecom-hidden");
                     }
+                    return {
+                        value: variant.value,
+                        qty: qty
+                    }
                 }
             });
         }
@@ -133,19 +137,16 @@ document.addEventListener("DOMContentLoaded", () =>
 
     // Add to cart feature
 
-    const cartButtons = document.querySelector(".popup-item-cart-button");
-    cartButtons.addEventListener("click", (event) =>
+    const cartButtons = document.querySelectorAll(".popup-item-cart-button");
+    cartButtons.forEach(button =>
     {
-        event.preventDefault();
-        const activeItem = document.querySelector(".popup-item.active");
-        const selectedVariantColor = activeItem.querySelector(".popup-item-variant-color.active");
-        const selectedSize = activeItem.querySelector(".selected-value").innerText;
-
-        if ( selectedSize && selectedVariantColor )
+        button.addEventListener("click", (event) =>
         {
-            // get value of .ecom-variants by matching text like 'size - color'
+            event.preventDefault();
+            const activeItem = document.querySelector(".popup-item.active");
+            const selectedVariantColor = activeItem.querySelector(".popup-item-variant-color.active");
+            const selectedSize = activeItem.querySelector(".selected-value").innerText;
             const selectedVariant = selectedSize + " / " + selectedVariantColor.innerText;
-            // match selectedVariant with options in .ecom-variants and get data-qty and value
             const ecomVariants = activeItem.querySelectorAll(".ecom-variants option");
             ecomVariants.forEach(variant =>
             {
@@ -153,20 +154,13 @@ document.addEventListener("DOMContentLoaded", () =>
                 if ( variantText === selectedVariant )
                 {
                     const qty = parseInt(variant.dataset.qty);
-                    const outOfStock = activeItem.querySelector(".popup-item-out-of-stock");
                     if ( qty > 0 )
                     {
-                        // add to cart
-                        alert("Added to cart: " + variant.value);
+                        // Add to cart logic here
+                        console.log("Added to cart: " + variant.value);
                     }
                 }
             });
-        }
+        });
     });
-
-
-
-
-
-
 });
