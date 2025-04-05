@@ -221,6 +221,7 @@
     background-position: right bottom;
     transition: all 0.3s ease-out;
     justify-content: center;
+    border: none;
     width: 100%;
 }
 
