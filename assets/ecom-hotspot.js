@@ -230,13 +230,14 @@ document.addEventListener("DOMContentLoaded", () =>
             ecomAddToCart(selectedVariantId, cartButton);
 
             // Add Complementary product if selectedVariantText is Medium / Black
-            if ( selectedVariantText === 'M / Black' )
+            if ( selectedVariantText === 'Medium / Black' )
             {
                 const complementaryProduct = document.querySelector(".hotspot_complementary_product");
                 const complementaryProductVariantId = complementaryProduct.dataset.variantid;
                 console.log("Complementary product variant id: ", complementaryProductVariantId);
                 ecomAddToCart(complementaryProductVariantId);
             }
+
         });
     });
 });
