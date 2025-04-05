@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () =>
 
             const activeItem = document.querySelector(".popup-item.active");
             const selectedVariant = activeItem.querySelector(".ecom-variants");
-            console.log("Adding to cart: " + selectedVariant.value);
+            
         });
     });
 });
