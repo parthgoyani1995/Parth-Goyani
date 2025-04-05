@@ -82,4 +82,8 @@ document.addEventListener("DOMContentLoaded", () =>
         });
     });
 
+
+    // enable cart button after selecting a variant
+    const cartButton = document.querySelector(".popup-item-cart-button");
+
 });
