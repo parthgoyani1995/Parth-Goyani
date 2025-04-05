@@ -144,9 +144,8 @@ document.addEventListener("DOMContentLoaded", () =>
             event.preventDefault();
 
             const activeItem = document.querySelector(".popup-item.active");
-            
-            let variantID = getSelectedVariant();
-            console.log("Adding to cart: " + variantID);
+            const selectedVariant = activeItem.querySelector(".ecom-variants");
+            console.log("Adding to cart: " + selectedVariant.value);
         });
     });
 });
