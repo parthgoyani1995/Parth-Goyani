@@ -136,19 +136,23 @@ document.addEventListener("DOMContentLoaded", () =>
     function handleSuccess(data, cartButton)
     {
         // add message in .popup-item-cart-message
-        let cartMessage = cartButton.parentElement.querySelector(".popup-item-cart-message");
-        if ( !cartMessage )
+        if ( cartButton )
         {
-            console.error("Cart message element not found");
-            return;
+            let cartMessage = cartButton.parentElement.querySelector(".popup-item-cart-message");
+            if ( !cartMessage )
+            {
+                console.error("Cart message element not found");
+                return;
+            }
+            cartMessage.classList.remove("ecom-hidden");
+            cartMessage.innerText = "Item added to cart";
+            // remove message after 3 seconds
+            setTimeout(() =>
+            {
+                cartMessage.classList.add("ecom-hidden");
+            }, 3000);
+
         }
-        cartMessage.classList.remove("ecom-hidden");
-        cartMessage.innerText = "Item added to cart";
-        // remove message after 3 seconds
-        setTimeout(() =>
-        {
-            cartMessage.classList.add("ecom-hidden");
-        }, 3000);
 
         const cartCount = document.querySelector(".cart-count");
         if ( !cartCount )
@@ -160,9 +164,12 @@ document.addEventListener("DOMContentLoaded", () =>
         cartCount.innerText = currentCount + 1;
     }
 
-    function ecomAddToCart (selectedVariantId, cartButton)
+    function ecomAddToCart(selectedVariantId, cartButton = null)
     {
-        cartButton.classList.remove("ecom-hidden");
+        if ( cartButton )
+        {
+            cartButton.classList.remove("ecom-hidden");
+        }
         fetch('/cart/add.js', {
             method: 'POST',
             headers: {
@@ -223,7 +230,7 @@ document.addEventListener("DOMContentLoaded", () =>
             ecomAddToCart(selectedVariantId, cartButton);
 
             // Add Complementary product if selectedVariantText is Medium / Black
-            if ( selectedVariantText === 'M / Black')
+            if ( selectedVariantText === 'M / Black' )
             {
                 const complementaryProduct = document.querySelector(".hotspot_complementary_product");
                 const complementaryProductVariantId = complementaryProduct.dataset.variantid;
