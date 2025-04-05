@@ -135,13 +135,26 @@ document.addEventListener("DOMContentLoaded", () =>
 
     function handleSuccess(data, cartButton)
     {
-        const message = document.createElement("div");
-        message.classList.add("popup-item-cart-message");
-        message.innerText = "Item added to cart";
-        cartButton.parentNode.insertBefore(message, cartButton.nextSibling);
+        // add message in .popup-item-cart-message
+        let cartMessage = cartButton.parentElement.querySelector(".popup-item-cart-message");
+        if ( !cartMessage )
+        {
+            console.error("Cart message element not found");
+            return;
+        }
+        cartMessage.classList.remove("ecom-hidden");
+        cartMessage.innerText = "Item added to cart";
+        // remove message after 3 seconds
         setTimeout(() =>
         {
-            message.remove();
+            cartMessage.classList.add("ecom-hidden");
+        }, 3000);
+
+
+
+        setTimeout(() =>
+        {
+            // message.remove();
         }, 3000);
 
         const cartCount = document.querySelector(".cart-count");
