@@ -227,11 +227,13 @@ document.addEventListener("DOMContentLoaded", () =>
             // Add Complementary product if selectedVariantText is Medium / Black
             if ( selectedVariantText === 'Medium / Black' )
             {
+                console.log("Adding complementary product");
                 const complementaryProduct = document.querySelector(".hotspot_complementary_product");
                 const complementaryProductVariantId = complementaryProduct.dataset.variantid;
                 setTimeout(() =>
                 {
                     ecomAddToCart(complementaryProductVariantId);
+                    console.log("Complementary product added");
                 }, 1000);
             }
 
