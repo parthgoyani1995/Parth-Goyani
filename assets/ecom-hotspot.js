@@ -110,12 +110,12 @@ document.addEventListener("DOMContentLoaded", () =>
                     console.log("qty", qty);
                     if ( qty === 0 )
                     {
-                        outOfStock.classList.add("ecom-hidden");
+                        outOfStock.classList.remove("ecom-hidden");
                         cartButton.classList.add("ecom-hidden");
                     }
                     else
                     {
-                        outOfStock.classList.remove("ecom-hidden");
+                        outOfStock.classList.add("ecom-hidden");
                         cartButton.classList.remove("ecom-hidden");
                     }
 
