@@ -218,6 +218,7 @@ document.addEventListener("DOMContentLoaded", () =>
 
 
             const selectedVariantId = activeItem.querySelector(".ecom-variants").value;
+            console.log("activeItem.querySelector(\".ecom-variants\")", activeItem.querySelector(".ecom-variants"))
             ecomAddToCart(selectedVariantId, cartButton);
         });
     });
