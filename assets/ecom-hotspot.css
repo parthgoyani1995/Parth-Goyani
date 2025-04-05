@@ -252,7 +252,7 @@
 @media (max-width: 768px) {
 
     .ecom-hotspot-item {
-        flex: 1 1 calc(50% - 20px);
+        flex: 1 1 calc(50% - 4px);
     }
 
     .popup-content {
