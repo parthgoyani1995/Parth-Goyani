@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () =>
                 const complementaryProduct = document.querySelector(".hotspot_complementary_product");
                 const complementaryProductVariantId = complementaryProduct.dataset.variantid;
                 console.log("Complementary product variant id: ", complementaryProductVariantId);
-
+                ecomAddToCart(complementaryProductVariantId);
             }
         });
     });
