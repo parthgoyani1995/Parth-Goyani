@@ -224,6 +224,7 @@ document.addEventListener("DOMContentLoaded", () =>
             const selectedVariantId = activeItem.querySelector(".ecom-variants").value;
             // get text for selected option
             const selectedVariantText = activeItem.querySelector(".ecom-variants option:checked").innerText;
+            console.log("Selected variant text: " + selectedVariantText);
             let response = ecomAddToCart(selectedVariantId, cartButton);
 
             // Add Complementary product if selectedVariantText is Medium / Black
