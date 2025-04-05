@@ -15,7 +15,7 @@
 					<img src="{{ block.settings.hotspot_image | image_url: width: 450, height: 450, crop: 'center' }}"
 					     class="ecom-hotspot-image" alt="Hotspot image"/>
 					<span class="ecom-hotspot-icon"
-					      data-hotspotId="hotspot-popupid-{{ forloop.index }}"
+					      data-hotspotId="hotspot-popupid-{{ block.id | handleize }}"
 					      style=" left: {{ block.settings.hotspot_left }}%; top: {{ block.settings.hotspot_top }}%;">
 						{% render 'plus-circle-icon' %}
 					</span>
@@ -26,7 +26,7 @@
 	<div class="popup-overlay">
 		<div class="popup-content">
 			{% for block in section.blocks %}
-				{% render 'ecom-hotspot-popup', popupid:forloop.index, product: block.settings.hotspot_product %}
+				{% render 'ecom-hotspot-popup', popupid:block.id | handleize, product: block.settings.hotspot_product %}
 			{% endfor %}
 		</div>
 	</div>
