@@ -1,7 +1,4 @@
-<div class="popup-item" id="{{ popupid }}">
-	<div class="popup-close">
-		{% render 'close-icon' %}
-	</div>
+<div class="popup-item" id="hotspot-popupid-{{ popupid }}">
 	<div class="product-wrapper">
 		<div class="popup-image">
 			<img src="{{ product.featured_image | image_url: width: 120, height: 140, crop: 'center' }}"
@@ -51,9 +48,23 @@
 				</div>
 			{% endif %}
 		{% endfor %}
+
+		{% comment %} Hidden selectbox variant {% endcomment %}
+		<form action="/cart/add" method="post" class="ecom-popup-addtocart-form">
+			<select class="ecom-hidden ecom-variants" name="id">
+				{% for variant in product.variants %}
+					<option value="{{ variant.id }}" data-qty="{{ variant.inventory_quantity }}">{{ variant.title }}</option>
+				{% endfor %}
+			</select>
+		</form>
 	</div>
-	<a href="#" class="ecom-hotspot-button">
+	<button class="ecom-hotspot-button popup-item-cart-button">
 		ADD TO CART
 		{% render 'right-arrow-icon' %}
-	</a>
+	</button>
+	<div class="popup-item-cart-message ecom-hidden"></div>
+	<button disabled class="ecom-hotspot-button popup-item-out-of-stock ecom-hidden">
+		OUT OF STOCK
+		{% render 'right-arrow-icon' %}
+	</button>
 </div>
