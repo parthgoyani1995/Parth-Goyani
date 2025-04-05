@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () =>
             event.preventDefault();
 
             const activeItem = document.querySelector(".popup-item.active");
-            const selectedVariantId = activeItem.querySelector(".ecom-variants");
+            const selectedVariantId = activeItem.querySelector(".ecom-variants").value;
             ecomAddToCart(selectedVariantId)
         });
     });
