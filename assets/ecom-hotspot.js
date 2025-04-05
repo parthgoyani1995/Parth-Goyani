@@ -116,10 +116,7 @@ document.addEventListener("DOMContentLoaded", () =>
                         outOfStock.classList.add("ecom-hidden");
                         cartButton.classList.remove("ecom-hidden");
                     }
-                    return {
-                        value: variant.value,
-                        qty: qty
-                    }
+                    return variant.value;
                 }
             });
         }
