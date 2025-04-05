@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () =>
         const activeItem = document.querySelector(".popup-item.active");
         const selectedVariantColor = activeItem.querySelector(".popup-item-variant-color.active");
         const selectedSize = activeItem.querySelector(".selected-value").innerText;
-
+        let variantId;
         if ( selectedSize && selectedVariantColor )
         {
             // get value of .ecom-variants by matching text like 'size - color'
@@ -116,10 +116,13 @@ document.addEventListener("DOMContentLoaded", () =>
                         outOfStock.classList.add("ecom-hidden");
                         cartButton.classList.remove("ecom-hidden");
                     }
-                    return variant.value;
+
+                    variantId = variant.value;
+
                 }
             });
         }
+        return variantId;
     }
 
     // getSelectedVariant on click of popup-item-variant-color  and popup-item-variant-select
