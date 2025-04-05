@@ -140,6 +140,7 @@ document.addEventListener("DOMContentLoaded", () =>
         event.preventDefault();
         // get closest from and log serialize form
         const form = activeItem.querySelector("form");
+        console.log("form", form);
         const formData = new FormData(form);
         const data = {};
         formData.forEach((value, key) =>
