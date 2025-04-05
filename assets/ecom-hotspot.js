@@ -11,17 +11,20 @@ document.addEventListener("DOMContentLoaded", () =>
             event.preventDefault();
             // get the data from the icon
             const hotspotid = icon.dataset.hotspotid;
+            // remove active from all .popup-item
+            const activeItems = document.querySelectorAll(".popup-item");
+            activeItems.forEach(item =>
+            {
+                item.classList.remove("active");
+            });
 
-            remove active from all 
-
-            const activeItem = document.querySelector("#"+hotspotid);
+            const activeItem = document.querySelector("#" + hotspotid);
             activeItem.classList.add("active");
             // Show the popup
             popup.classList.add("active");
 
         });
     });
-
 
 
     // close popup when clicking on X
@@ -35,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () =>
     document.addEventListener("click", (event) =>
     {
         const popupContent = document.querySelector(".popup-content");
-        if (popup.classList.contains("active") && !popupContent.contains(event.target) && !closePopup.contains(event.target) && !event.target.closest(".ecom-hotspot-icon"))
+        if ( popup.classList.contains("active") && !popupContent.contains(event.target) && !closePopup.contains(event.target) && !event.target.closest(".ecom-hotspot-icon") )
         {
             popup.classList.remove("active");
         }
