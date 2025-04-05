@@ -158,6 +158,7 @@ document.addEventListener("DOMContentLoaded", () =>
             const currentCount = parseInt(cartCount.innerText);
             cartCount.innerText = currentCount + 1;
         }
+        return data;
     }
 
     function ecomAddToCart(selectedVariantId, cartButton = null)
