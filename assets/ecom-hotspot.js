@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () =>
             {
                 event.stopPropagation();
                 selected.textContent = option.textContent;
+                getSelectedVariant();
                 dropdown.classList.remove('open');
             });
         });
@@ -103,14 +104,6 @@ document.addEventListener("DOMContentLoaded", () =>
     popupItemVariantColor.forEach(item =>
     {
         item.addEventListener("click", () =>
-        {
-            getSelectedVariant();
-        });
-    });
-    dropdowns.forEach(dropdown =>
-    {
-        const select = dropdown.querySelector('.popup-item-variant-select');
-        select.addEventListener('click', () =>
         {
             getSelectedVariant();
         });
