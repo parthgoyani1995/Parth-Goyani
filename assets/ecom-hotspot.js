@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () =>
     document.addEventListener("click", (event) =>
     {
         const popupContent = document.querySelector(".popup-content");
-        if ( popup.classList.contains("active") && !popupContent.contains(event.target) && !closePopup.contains(event.target) && !event.target.classList.contains("ecom-hotspot-icon") )
+        if ( popup.classList.contains("active") && !popupContent.contains(event.target) && !closePopup.contains(event.target) && !event.target.closest(".ecom-hotspot-icon") )
         {
             popup.classList.remove("active");
         }
