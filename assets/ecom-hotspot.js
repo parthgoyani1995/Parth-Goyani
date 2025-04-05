@@ -101,13 +101,12 @@ document.addEventListener("DOMContentLoaded", () =>
             ecomVariants.forEach(variant =>
             {
                 const variantText = variant.innerText;
-                console.log("variantText", variantText);
                 if ( variantText === selectedVariant )
                 {
                     const qty = parseInt(variant.dataset.qty);
                     const outOfStock = activeItem.querySelector(".popup-item-out-of-stock");
                     const cartButton = activeItem.querySelector(".popup-item-cart-button");
-                    console.log("qty", qty);
+
                     if ( qty === 0 )
                     {
                         outOfStock.classList.remove("ecom-hidden");
@@ -118,7 +117,6 @@ document.addEventListener("DOMContentLoaded", () =>
                         outOfStock.classList.add("ecom-hidden");
                         cartButton.classList.remove("ecom-hidden");
                     }
-
                 }
             });
         }
