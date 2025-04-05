@@ -50,11 +50,13 @@
 		{% endfor %}
 
 		{% comment %} Hidden selectbox variant {% endcomment %}
-		<select class="ecom-hidden ecom-variants" name="id">
-			{% for variant in product.variants %}
-				<option value="{{ variant.id }}" data-qty="{{ variant.inventory_quantity }}">{{ variant.title }}</option>
-			{% endfor %}
-		</select>
+		<form action="/cart/add" method="post" class="ecom-popup-addtocart-form">
+			<select class="ecom-hidden ecom-variants" name="id">
+				{% for variant in product.variants %}
+					<option value="{{ variant.id }}" data-qty="{{ variant.inventory_quantity }}">{{ variant.title }}</option>
+				{% endfor %}
+			</select>
+		</form>
 	</div>
 	<button disabled class="ecom-hotspot-button popup-item-cart-button">
 		ADD TO CART
