@@ -103,9 +103,17 @@ document.addEventListener("DOMContentLoaded", () =>
                 const variantText = variant.innerText;
                 if ( variantText === selectedVariant )
                 {
-                    const qty = variant.dataset.qty;
-                    const value = variant.dataset.value;
-                    // Show out of stock button if qty is 0
+                    const qty = parseInt(variant.dataset.qty);
+                    const outOfStock = activeItem.querySelector(".popup-item-out-of-stock");
+                    if ( qty === 0 )
+                    {
+                        outOfStock.classList.add("active");
+                    }
+                    else
+                    {
+                        outOfStock.classList.remove("active");
+                    }
+
                 }
             });
         }
