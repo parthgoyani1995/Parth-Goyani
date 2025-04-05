@@ -27,7 +27,7 @@
 			</div>
 			{% for block in section.blocks %}
 				{% assign popupid = block.id | handleize %}
-				{% render 'ecom-hotspot-popup', popupid:popupid, product: block.settings.hotspot_product %}
+				{% render 'ecom-hotspot-popup', popupid: popupid, product: block.settings.hotspot_product %}
 			{% endfor %}
 		</div>
 	</div>
