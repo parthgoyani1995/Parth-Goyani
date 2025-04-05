@@ -105,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () =>
                 {
                     const qty = variant.dataset.qty;
                     const value = variant.dataset.value;
+                    set
                 }
             });
         }
