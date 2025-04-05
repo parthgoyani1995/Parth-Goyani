@@ -87,16 +87,12 @@ document.addEventListener("DOMContentLoaded", () =>
     // Select appropriate variant in ecom-variants
     function getSelectedVariant()
     {
-
         const activeItem = document.querySelector(".popup-item.active");
         const selectedVariantColor = activeItem.querySelector(".popup-item-variant-color.active");
         const selectedSize = activeItem.querySelector(".selected-value").innerText;
 
-        if (!selectedVariantColor && !selectedSize)
+        if ( selectedSize && selectedVariantColor )
         {
-            
-            return;
-        }
             // get value of .ecom-variants by matching text like 'size - color'
             const selectedVariant = selectedSize + " / " + selectedVariantColor.innerText;
             // match selectedVariant with options in .ecom-variants and get data-qty and value
@@ -122,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () =>
                     }
                 }
             });
-
+        }
     }
 
     // getSelectedVariant on click of popup-item-variant-color  and popup-item-variant-select
