@@ -139,17 +139,16 @@ document.addEventListener("DOMContentLoaded", () =>
         if ( cartButton )
         {
             let cartMessage = cartButton.parentElement.querySelector(".popup-item-cart-message");
-            if ( !cartMessage )
+            if ( cartMessage )
             {
-                console.error("Cart message element not found");
+                cartMessage.classList.remove("ecom-hidden");
+                cartMessage.innerText = "Item added to cart";
+                // remove message after 3 seconds
+                setTimeout(() =>
+                {
+                    cartMessage.classList.add("ecom-hidden");
+                }, 3000);
             }
-            cartMessage.classList.remove("ecom-hidden");
-            cartMessage.innerText = "Item added to cart";
-            // remove message after 3 seconds
-            setTimeout(() =>
-            {
-                cartMessage.classList.add("ecom-hidden");
-            }, 3000);
 
         }
 
