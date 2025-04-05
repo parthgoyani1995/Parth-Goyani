@@ -101,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () =>
             ecomVariants.forEach(variant =>
             {
                 const variantText = variant.innerText;
+                console.log("variantText", variantText);
                 if ( variantText === selectedVariant )
                 {
                     const qty = parseInt(variant.dataset.qty);
