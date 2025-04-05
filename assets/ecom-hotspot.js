@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () =>
             // get the data from the icon
             const hotspotid = icon.dataset.hotspotid;
 
+            remove active from all 
+
             const activeItem = document.querySelector("#"+hotspotid);
             activeItem.classList.add("active");
             // Show the popup
