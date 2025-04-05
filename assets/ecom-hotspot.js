@@ -156,6 +156,7 @@ document.addEventListener("DOMContentLoaded", () =>
 
     function ecomAddToCart (selectedVariantId)
     {
+        console.log("selectedVariantId", selectedVariantId);
         const cartButton = document.querySelector(".popup-item-cart-button");
         cartButton.classList.remove("ecom-hidden");
         fetch('/cart/add.js', {
