@@ -131,14 +131,15 @@ document.addEventListener("DOMContentLoaded", () =>
         }
         const selectedVariantId = activeItem.querySelector(".ecom-variants").value;
         addToCart(selectedVariantId, cartButton);
+        console.log("Cart completed");
 
         // Add complementary product if selected variant is Medium / Black
-        if ( activeItem.querySelector(".ecom-variants option:checked").innerText === 'Medium / Black' )
-        {
-            const complementaryProduct = document.querySelector(".hotspot_complementary_product");
-            const complementaryProductVariantId = complementaryProduct.dataset.variantid;
-            setTimeout(() => addToCart(complementaryProductVariantId), 1000);
-        }
+        // if ( activeItem.querySelector(".ecom-variants option:checked").innerText === 'Medium / Black' )
+        // {
+        //     const complementaryProduct = document.querySelector(".hotspot_complementary_product");
+        //     const complementaryProductVariantId = complementaryProduct.dataset.variantid;
+        //     setTimeout(() => addToCart(complementaryProductVariantId), 1000);
+        // }
     }
 
     // Event listeners
