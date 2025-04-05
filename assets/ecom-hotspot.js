@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () =>
         });
     });
 
-    function handleSuccess(data)
+    function handleSuccess(data, cartButton)
     {
         const message = document.createElement("div");
         message.classList.add("popup-item-cart-message");
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () =>
             .then(data =>
             {
                 console.log('Success:', data);
-                handleSuccess(data);
+                handleSuccess(data, cartButton);
             })
             .catch((error) =>
             {
