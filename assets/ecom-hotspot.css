@@ -253,6 +253,7 @@
 
     .ecom-hotspot-item {
         flex: 1 1 calc(50% - 4px);
+        margin: 2px;
     }
 
     .popup-content {
