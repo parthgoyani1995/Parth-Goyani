@@ -140,7 +140,6 @@ document.addEventListener("DOMContentLoaded", () =>
     const cartButtons = document.querySelectorAll(".popup-item-cart-button");
     cartButtons.forEach(button =>
     {
-            console.log("Adding to cart");
         button.addEventListener("click", (event) =>
         {
             event.preventDefault();
