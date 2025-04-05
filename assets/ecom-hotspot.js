@@ -164,13 +164,13 @@ document.addEventListener("DOMContentLoaded", () =>
         cartCount.innerText = currentCount + 1;
     }
 
-    async function ecomAddToCart(selectedVariantId, cartButton = null)
+    function ecomAddToCart(selectedVariantId, cartButton = null)
     {
         if ( cartButton )
         {
             cartButton.classList.remove("ecom-hidden");
         }
-        await fetch('/cart/add.js', {
+        fetch('/cart/add.js', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -190,7 +190,6 @@ document.addEventListener("DOMContentLoaded", () =>
             {
                 console.error('Error:', error);
             });
-        return true;
     }
 
 
@@ -228,18 +227,15 @@ document.addEventListener("DOMContentLoaded", () =>
             const selectedVariantId = activeItem.querySelector(".ecom-variants").value;
             // get text for selected option
             const selectedVariantText = activeItem.querySelector(".ecom-variants option:checked").innerText;
-            let response = ecomAddToCart(selectedVariantId, cartButton);
+            ecomAddToCart(selectedVariantId, cartButton);
 
-            if ( response )
+            // Add Complementary product if selectedVariantText is Medium / Black
+            if ( selectedVariantText === 'M / Black' )
             {
-                // Add Complementary product if selectedVariantText is Medium / Black
-                if ( selectedVariantText === 'M / Black' )
-                {
-                    const complementaryProduct = document.querySelector(".hotspot_complementary_product");
-                    const complementaryProductVariantId = complementaryProduct.dataset.variantid;
-
-                    let complementaryProductResponse = ecomAddToCart(complementaryProductVariantId);
-                }
+                const complementaryProduct = document.querySelector(".hotspot_complementary_product");
+                const complementaryProductVariantId = complementaryProduct.dataset.variantid;
+                console.log("Complementary product variant id: ", complementaryProductVariantId);
+                ecomAddToCart(complementaryProductVariantId);
             }
         });
     });
