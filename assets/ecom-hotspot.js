@@ -84,14 +84,18 @@ document.addEventListener("DOMContentLoaded", () =>
 
 
     // Select appropriate variant in ecom-variants
-
-    const selectedVariantColor = document.querySelector(".popup-item-variant-color.active");
-    const selectedSize = document.querySelector(".popup-item-variant-select .selected-value").innerText;
-
-    if ( selectedSize && selectedVariantColor )
+    function getSelectedVariant()
     {
-        // get value of .ecom-variants by matching text like 'size - color'
-        const selectedVariant = selectedSize + " - " + selectedVariantColor.innerText;
+        const selectedVariantColor = document.querySelector(".popup-item-variant-color.active");
+        const selectedSize = document.querySelector(".popup-item-variant-select .selected-value").innerText;
+
+        if ( selectedSize && selectedVariantColor )
+        {
+            // get value of .ecom-variants by matching text like 'size - color'
+            const selectedVariant = selectedSize + " - " + selectedVariantColor.innerText;
+        }
     }
+
+    popup-item-variant-color click and 
 
 });
