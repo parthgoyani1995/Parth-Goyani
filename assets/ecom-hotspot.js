@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", () =>
             .then(data =>
             {
                 console.log('Success:', data);
-                handleSuccess(data, cartButton);
+                let handleResponse = handleSuccess(data, cartButton);
             })
             .catch((error) =>
             {
