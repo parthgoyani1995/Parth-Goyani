@@ -22,6 +22,9 @@
 	</div>
 	<div class="popup-overlay">
 		<div class="popup-content">
+			<div class="popup-close">
+				{% render 'close-icon' %}
+			</div>
 			{% for block in section.blocks %}
 				{% assign popupid = block.id | handleize %}
 				{% render 'ecom-hotspot-popup', popupid:popupid, product: block.settings.hotspot_product %}
