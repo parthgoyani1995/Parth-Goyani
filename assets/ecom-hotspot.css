@@ -263,7 +263,10 @@
 
 
 @media (max-width: 768px) {
-
+    .ecom-hotspot-section
+    {
+        padding: 30px 15px;
+    }
     .ecom-hotspot-item {
         flex: 1 1 calc(50% - 4px);
         margin: 2px;
