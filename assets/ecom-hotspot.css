@@ -1,4 +1,7 @@
-
+.ecom-hidden
+{
+    display: none !important;
+}
 .ecom-hotspot-container {
     margin: 0 auto;
 }
