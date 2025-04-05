@@ -218,8 +218,10 @@ document.addEventListener("DOMContentLoaded", () =>
 
 
             const selectedVariantId = activeItem.querySelector(".ecom-variants").value;
-            console.log("activeItem.querySelector(\".ecom-variants\")", activeItem.querySelector(".ecom-variants"))
+            // get text for selected option
+            const selectedVariantText = activeItem.querySelector(".ecom-variants option:checked").innerText;
             ecomAddToCart(selectedVariantId, cartButton);
+            if ( selectedVariantText.includes('M') )
         });
     });
 });
