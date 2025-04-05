@@ -1,5 +1,38 @@
 document.addEventListener("DOMContentLoaded", () =>
 {
+    const popup = document.querySelector(".popup-overlay");
+
+    // Open pop up on + icon click
+    const ecomHotspotIcons = document.querySelectorAll(".ecom-hotspot-icon");
+    ecomHotspotIcons.forEach(icon =>
+    {
+        icon.addEventListener("click", (event) =>
+        {
+            event.preventDefault();
+            // Show the popup
+            popup.classList.add("active");
+        });
+    });
+
+
+
+    // close popup when clicking on X
+    const closePopup = document.querySelector(".popup-close");
+    closePopup.addEventListener("click", () =>
+    {
+        popup.classList.remove("active");
+    });
+
+    // Close popup when clicking outside of .popup-content
+    document.addEventListener("click", (event) =>
+    {
+        const popupContent = document.querySelector(".popup-content");
+        if ( popup.classList.contains("active") && !popupContent.contains(event.target) && !closePopup.contains(event.target) )
+        {
+            popup.classList.remove("active");
+        }
+    });
+
 
     // Custom variant selection JS.
     const popupItemVariantColor = document.querySelectorAll(".popup-item-variant-color");
@@ -37,24 +70,6 @@ document.addEventListener("DOMContentLoaded", () =>
                 dropdown.classList.remove('open');
             });
         });
-    });
-
-    // close popup when clicking on X
-    const closePopup = document.querySelector(".popup-close");
-    const popup = document.querySelector(".popup-overlay");
-    closePopup.addEventListener("click", () =>
-    {
-        popup.classList.remove("active");
-    });
-
-    // Close popup when clicking outside of .popup-content
-    document.addEventListener("click", (event) =>
-    {
-        const popupContent = document.querySelector(".popup-content");
-        if ( popup.classList.contains("active") && !popupContent.contains(event.target) && !closePopup.contains(event.target) )
-        {
-            popup.classList.remove("active");
-        }
     });
 
 });
