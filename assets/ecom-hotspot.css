@@ -217,6 +217,7 @@
     background-position: right bottom;
     transition: all 0.3s ease-out;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .ecom-hotspot-button:hover {
