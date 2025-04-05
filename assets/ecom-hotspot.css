@@ -255,6 +255,11 @@
         flex: 1 1 calc(50% - 4px);
         margin: 2px;
     }
+    .ecom-hotspot-item .ecom-hotspot-icon svg
+    {
+        height: 18px;
+        width: 18px;
+    }
 
     .popup-content {
         max-width: 90%;
