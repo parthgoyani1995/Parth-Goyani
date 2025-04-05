@@ -142,6 +142,8 @@ document.addEventListener("DOMContentLoaded", () =>
         button.addEventListener("click", (event) =>
         {
             event.preventDefault();
+
+            const activeItem = document.querySelector(".popup-item.active");
             
             let variantID = getSelectedVariant();
             console.log("Adding to cart: " + variantID);
