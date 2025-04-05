@@ -223,9 +223,8 @@ document.addEventListener("DOMContentLoaded", () =>
             // get text for selected option
             const selectedVariantText = activeItem.querySelector(".ecom-variants option:checked").innerText;
             ecomAddToCart(selectedVariantId, cartButton);
-            console.log("Selected variant text: " + selectedVariantText);
             // Add Complementary product if selectedVariantText is Medium / Black
-            if ( selectedVariantText === 'Medium / Black' )
+            if ( selectedVariantText === 'M / Black' )
             {
                 console.log("Adding complementary product");
                 const complementaryProduct = document.querySelector(".hotspot_complementary_product");
