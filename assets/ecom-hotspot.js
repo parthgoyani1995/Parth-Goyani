@@ -153,9 +153,14 @@ document.addEventListener("DOMContentLoaded", () =>
                 console.log('Success:', data);
                 // Optionally, you can show a success message or update the cart icon here.
                 const cartCount = document.querySelector(".cart-count");
+                if ( !cartCount )
+                {
+                    console.error("Cart count element not found");
+                    return;
+                }
                 const currentCount = parseInt(cartCount.innerText);
                 cartCount.innerText = currentCount + 1;
-                
+
             })
             .catch((error) =>
             {
