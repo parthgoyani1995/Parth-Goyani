@@ -10,9 +10,10 @@ document.addEventListener("DOMContentLoaded", () =>
         {
             event.preventDefault();
             // get the data from the icon
-            const data = icon.dataset.hotspotid;
+            const hotspotid = icon.dataset.hotspotid;
 
-
+            const activeItem = document.querySelector("#"+hotspotid);
+            activeItem.classList.add("active");
             // Show the popup
             popup.classList.add("active");
 
