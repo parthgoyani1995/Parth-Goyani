@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () =>
         {
             event.preventDefault();
             let variantID = getSelectedVariant();
-            
+            console.log("Adding to cart: " + variantID);
         });
     });
 });
