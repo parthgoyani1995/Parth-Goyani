@@ -19,7 +19,6 @@
     },
     "ecom_banner_pNDiVT": {
       "type": "ecom-banner",
-      "disabled": true,
       "settings": {
         "container_width": 1400,
         "banner_image": "shopify://shop_images/dark-mens-fashion-mock-turtle-neck.jpg",
