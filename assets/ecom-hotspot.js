@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", () =>
     const closePopup = document.querySelector(".popup-close");
     closePopup.addEventListener("click", () =>
     {
-        const popup = document.querySelector(".popup");
-        popup.classList.remove("open");
+        const popup = document.querySelector(".popup-overlay");
+        popup.classList.remove("active");
     });
 
 });
