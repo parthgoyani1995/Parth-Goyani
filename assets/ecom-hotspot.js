@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () =>
             // get value of .ecom-variants by matching text like 'size - color'
             const selectedVariant = selectedSize + " / " + selectedVariantColor.innerText;
             // match selectedVariant with options in .ecom-variants and get data-qty and value
-            const ecomVariants = document.querySelectorAll(".ecom-variants option");
+            const ecomVariants = activeItem.querySelectorAll(".ecom-variants option");
             ecomVariants.forEach(variant =>
             {
                 const variantText = variant.innerText;
