@@ -36,11 +36,11 @@ document.addEventListener("DOMContentLoaded", () =>
     // Close popup when clicking outside of .popup-content
     document.addEventListener("click", (event) =>
     {
-        if (popup.classList.contains("active") && !event.target.closest(".popup-content"))
+        const popupContent = document.querySelector(".popup-content");
+        if ( popup.classList.contains("active") && !popupContent.contains(event.target) && !closePopup.contains(event.target) && !event.target.classList.contains("ecom-hotspot-icon") )
         {
             popup.classList.remove("active");
         }
-
     });
 
 
