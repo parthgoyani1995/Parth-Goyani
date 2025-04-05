@@ -2,66 +2,111 @@ document.addEventListener("DOMContentLoaded", () =>
 {
     const popup = document.querySelector(".popup-overlay");
 
-    // Function to open the popup
-    function openPopup(icon)
+    // Open pop up on + icon click
+    const ecomHotspotIcons = document.querySelectorAll(".ecom-hotspot-icon");
+    ecomHotspotIcons.forEach(icon =>
     {
-        const hotspotId = icon.dataset.hotspotid;
-        document.querySelectorAll(".popup-item").forEach(item => item.classList.remove("active"));
-        document.querySelector(`#${ hotspotId }`).classList.add("active");
-        popup.classList.add("active");
-    }
+        icon.addEventListener("click", (event) =>
+        {
+            event.preventDefault();
+            // get the data from the icon
+            const hotspotId = icon.dataset.hotspotid;
+            // remove active from all .popup-item
+            const activeItems = document.querySelectorAll(".popup-item");
+            activeItems.forEach(item =>
+            {
+                item.classList.remove("active");
+            });
+            const activeItem = document.querySelector("#" + hotspotId);
+            activeItem.classList.add("active");
+            // Show the popup
+            popup.classList.add("active");
 
-    // Function to close the popup
-    function closePopup()
+        });
+    });
+
+
+    // close popup when clicking on X
+    const closePopup = document.querySelector(".popup-close");
+    closePopup.addEventListener("click", () =>
     {
         popup.classList.remove("active");
-    }
+    });
 
-    // Function to handle outside click to close the popup
-    function handleOutsideClick(event)
+    // Close popup when clicking outside of .popup-content
+    document.addEventListener("click", (event) =>
     {
         const popupContent = document.querySelector(".popup-content");
-        if ( popup.classList.contains("active") && !popupContent.contains(event.target) && !event.target.closest(".ecom-hotspot-icon") )
+        if ( popup.classList.contains("active") && !popupContent.contains(event.target) && !closePopup.contains(event.target) && !event.target.closest(".ecom-hotspot-icon") )
         {
-            closePopup();
+            popup.classList.remove("active");
         }
-    }
+    });
 
-    // Function to handle variant color selection
-    function handleVariantColorSelection(item)
-    {
-        document.querySelectorAll(".popup-item-variant-color.active").forEach(activeItem => activeItem.classList.remove("active"));
-        item.classList.add("active");
-        updateSelectedVariant();
-    }
 
-    // Function to handle dropdown selection
-    function handleDropdownSelection(dropdown, option)
+    // Custom variant selection JS.
+    const popupItemVariantColor = document.querySelectorAll(".popup-item-variant-color");
+    popupItemVariantColor.forEach(item =>
     {
+        item.addEventListener("click", () =>
+        {
+            const activeItem = document.querySelector(".popup-item-variant-color.active");
+            if ( activeItem )
+            {
+                activeItem.classList.remove("active");
+            }
+            item.classList.add("active");
+        });
+    });
+
+    const dropdowns = document.querySelectorAll('.popup-variant-dropdown');
+    dropdowns.forEach(dropdown =>
+    {
+        const select = dropdown.querySelector('.popup-item-variant-select');
         const selected = dropdown.querySelector('.selected-value');
-        selected.textContent = option.textContent;
-        updateSelectedVariant();
-        dropdown.classList.remove('open');
-    }
 
-    // Function to update the selected variant
-    function updateSelectedVariant()
+        dropdown.addEventListener('click', () =>
+        {
+            dropdowns.forEach(d => d.classList.remove('open'));
+            dropdown.classList.toggle('open');
+        });
+
+        select.querySelectorAll('span').forEach(option =>
+        {
+            option.addEventListener('click', event =>
+            {
+                event.stopPropagation();
+                selected.textContent = option.textContent;
+                getSelectedVariant();
+                dropdown.classList.remove('open');
+            });
+        });
+    });
+
+
+    // Select appropriate variant in ecom-variants
+    function getSelectedVariant()
     {
         const activeItem = document.querySelector(".popup-item.active");
-        const selectedColor = activeItem.querySelector(".popup-item-variant-color.active");
+        const selectedVariantColor = activeItem.querySelector(".popup-item-variant-color.active");
         const selectedSize = activeItem.querySelector(".selected-value").innerText;
-        if ( selectedSize && selectedColor )
+        if ( selectedSize && selectedVariantColor )
         {
-            const selectedVariant = `${ selectedSize } / ${ selectedColor.innerText }`;
+            // get value of .ecom-variants by matching text like 'size - color'
+            const selectedVariant = selectedSize + " / " + selectedVariantColor.innerText;
+
+            // match selectedVariant with options in .ecom-variants and get data-qty and value
             const options = activeItem.querySelectorAll(".ecom-variants option");
             options.forEach(option =>
             {
-                if ( option.innerText === selectedVariant )
+                const variantText = option.innerText;
+                if ( variantText === selectedVariant )
                 {
                     option.selected = true;
                     const qty = parseInt(option.dataset.qty);
                     const outOfStock = activeItem.querySelector(".popup-item-out-of-stock");
                     const cartButton = activeItem.querySelector(".popup-item-cart-button");
+
                     if ( qty === 0 )
                     {
                         outOfStock.classList.remove("ecom-hidden");
@@ -72,94 +117,128 @@ document.addEventListener("DOMContentLoaded", () =>
                         outOfStock.classList.add("ecom-hidden");
                         cartButton.classList.remove("ecom-hidden");
                     }
+
+
                 }
             });
         }
     }
 
-    // Function to handle add to cart success
-    function handleAddToCartSuccess(data, cartButton)
+    // getSelectedVariant on click of popup-item-variant-color  and popup-item-variant-select
+    popupItemVariantColor.forEach(item =>
     {
+        item.addEventListener("click", () =>
+        {
+            getSelectedVariant();
+        });
+    });
+
+    function handleSuccess(data, cartButton)
+    {
+        // add message in .popup-item-cart-message
         if ( cartButton )
         {
-            const cartMessage = cartButton.parentElement.querySelector(".popup-item-cart-message");
+            let cartMessage = cartButton.parentElement.querySelector(".popup-item-cart-message");
             if ( cartMessage )
             {
                 cartMessage.classList.remove("ecom-hidden");
                 cartMessage.innerText = "Item added to cart";
-                setTimeout(() => cartMessage.classList.add("ecom-hidden"), 3000);
+                // remove message after 3 seconds
+                setTimeout(() =>
+                {
+                    cartMessage.classList.add("ecom-hidden");
+                }, 3000);
             }
+
         }
+
         const cartCount = document.querySelector(".cart-count");
         if ( cartCount )
         {
-            cartCount.innerText = parseInt(cartCount.innerText) + 1;
+            const currentCount = parseInt(cartCount.innerText);
+            cartCount.innerText = currentCount + 1;
         }
+        return true;
     }
 
-    // Function to add item to cart
-    function addToCart(variantId, cartButton = null)
+    function ecomAddToCart(selectedVariantId, cartButton = null)
     {
+        if ( cartButton )
+        {
+            cartButton.classList.remove("ecom-hidden");
+        }
         fetch('/cart/add.js', {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({id: variantId, quantity: 1})
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                id: selectedVariantId,
+                quantity: 1
+            })
         })
             .then(response => response.json())
-            .then(data => handleAddToCartSuccess(data, cartButton))
-            .catch(error => console.error('Error:', error));
-    }
-
-    // Function to handle add to cart button click
-    function handleAddToCartButtonClick(event)
-    {
-        event.preventDefault();
-        const cartButton = event.currentTarget;
-        const activeItem = document.querySelector(".popup-item.active");
-        const selectedColor = activeItem.querySelector(".popup-item-variant-color.active");
-        const selectedSize = activeItem.querySelector(".selected-value").innerText;
-        if ( !selectedSize || !selectedColor )
-        {
-            const cartMessage = cartButton.parentElement.querySelector(".popup-item-cart-message");
-            if ( cartMessage )
+            .then(data =>
             {
-                cartMessage.classList.remove("ecom-hidden");
-                cartMessage.innerText = "Please select a variant";
-                setTimeout(() => cartMessage.classList.add("ecom-hidden"), 3000);
-            }
-            return;
-        }
-        const selectedVariantId = activeItem.querySelector(".ecom-variants").value;
-        addToCart(selectedVariantId, cartButton);
-        console.log("Cart completed");
-
-        // Add complementary product if selected variant is Medium / Black
-        // if ( activeItem.querySelector(".ecom-variants option:checked").innerText === 'Medium / Black' )
-        // {
-        //     const complementaryProduct = document.querySelector(".hotspot_complementary_product");
-        //     const complementaryProductVariantId = complementaryProduct.dataset.variantid;
-        //     setTimeout(() => addToCart(complementaryProductVariantId), 1000);
-        // }
+                console.log('Success:', data);
+                let handleResponse = handleSuccess(data, cartButton);
+            })
+            .catch((error) =>
+            {
+                console.error('Error:', error);
+            });
+        return true;
     }
 
-    // Event listeners
-    document.querySelectorAll(".ecom-hotspot-icon").forEach(icon => icon.addEventListener("click", () => openPopup(icon)));
-    document.querySelector(".popup-close").addEventListener("click", closePopup);
-    document.addEventListener("click", handleOutsideClick);
-    document.querySelectorAll(".popup-item-variant-color").forEach(item => item.addEventListener("click", () => handleVariantColorSelection(item)));
-    document.querySelectorAll('.popup-variant-dropdown').forEach(dropdown =>
+
+    // Add to cart feature
+    const cartButtons = document.querySelectorAll(".popup-item-cart-button");
+    cartButtons.forEach(button =>
     {
-        const select = dropdown.querySelector('.popup-item-variant-select');
-        dropdown.addEventListener('click', () =>
+        button.addEventListener("click", (event) =>
         {
-            document.querySelectorAll('.popup-variant-dropdown').forEach(d => d.classList.remove('open'));
-            dropdown.classList.toggle('open');
+            event.preventDefault();
+            const cartButton = event.currentTarget;
+            const activeItem = document.querySelector(".popup-item.active");
+            const selectedVariantColor = activeItem.querySelector(".popup-item-variant-color.active");
+            const selectedSize = activeItem.querySelector(".selected-value").innerText;
+            if ( !selectedSize || !selectedVariantColor )
+            {
+                let cartMessage = cartButton.parentElement.querySelector(".popup-item-cart-message");
+                if ( cartMessage )
+                {
+                    cartMessage.classList.remove("ecom-hidden");
+                    cartMessage.innerText = "Please select a variant";
+                    // remove message after 3 seconds
+                    setTimeout(() =>
+                    {
+                        cartMessage.classList.add("ecom-hidden");
+                    }, 3000);
+
+                }
+                console.error("Please select a variant");
+                return;
+            }
+
+
+            const selectedVariantId = activeItem.querySelector(".ecom-variants").value;
+            // get text for selected option
+            const selectedVariantText = activeItem.querySelector(".ecom-variants option:checked").innerText;
+            let response = ecomAddToCart(selectedVariantId, cartButton);
+
+            // Add Complementary product if selectedVariantText is Medium / Black
+            if ( selectedVariantText === 'Medium / Black' )
+            {
+                console.log("Adding complementary product");
+                const complementaryProduct = document.querySelector(".hotspot_complementary_product");
+                const complementaryProductVariantId = complementaryProduct.dataset.variantid;
+                setTimeout(() =>
+                {
+                    ecomAddToCart(complementaryProductVariantId);
+                    console.log("Complementary product added");
+                }, 1000);
+            }
+
         });
-        select.querySelectorAll('span').forEach(option => option.addEventListener('click', event =>
-        {
-            event.stopPropagation();
-            handleDropdownSelection(dropdown, option);
-        }));
     });
-    document.querySelectorAll(".popup-item-cart-button").forEach(button => button.addEventListener("click", handleAddToCartButtonClick));
 });
