@@ -144,6 +144,7 @@ document.addEventListener("DOMContentLoaded", () =>
         {
             event.preventDefault();
             let variantID = getSelectedVariant();
+            
         });
     });
 });
