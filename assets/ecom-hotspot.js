@@ -167,9 +167,8 @@ document.addEventListener("DOMContentLoaded", () =>
         cartCount.innerText = currentCount + 1;
     }
 
-    function ecomAddToCart (selectedVariantId)
+    function ecomAddToCart (selectedVariantId, cartButton)
     {
-        const cartButton = document.querySelector(".popup-item-cart-button");
         cartButton.classList.remove("ecom-hidden");
         fetch('/cart/add.js', {
             method: 'POST',
@@ -202,9 +201,11 @@ document.addEventListener("DOMContentLoaded", () =>
         {
             event.preventDefault();
 
+
             const activeItem = document.querySelector(".popup-item.active");
             const selectedVariantId = activeItem.querySelector(".ecom-variants").value;
-            ecomAddToCart(selectedVariantId)
+            const cartButton = event.currentTarget;
+            ecomAddToCart(selectedVariantId, cartButton)
         });
     });
 });
