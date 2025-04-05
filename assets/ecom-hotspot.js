@@ -142,7 +142,6 @@ document.addEventListener("DOMContentLoaded", () =>
             if ( !cartMessage )
             {
                 console.error("Cart message element not found");
-                return;
             }
             cartMessage.classList.remove("ecom-hidden");
             cartMessage.innerText = "Item added to cart";
@@ -158,7 +157,6 @@ document.addEventListener("DOMContentLoaded", () =>
         if ( !cartCount )
         {
             console.error("Cart count element not found");
-            return;
         }
         const currentCount = parseInt(cartCount.innerText);
         cartCount.innerText = currentCount + 1;
@@ -210,7 +208,6 @@ document.addEventListener("DOMContentLoaded", () =>
                 if ( !cartMessage )
                 {
                     console.error("Cart message element not found");
-                    return;
                 }
                 cartMessage.classList.remove("ecom-hidden");
                 cartMessage.innerText = "Please select a variant";
