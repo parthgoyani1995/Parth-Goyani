@@ -41,16 +41,15 @@ document.addEventListener("DOMContentLoaded", () =>
 
     // close popup when clicking on X
    const closePopup = document.querySelector(".popup-close");
+   const popup = document.querySelector(".popup-overlay");
    closePopup.addEventListener("click", () =>
    {
-       const popup = document.querySelector(".popup-overlay");
        popup.classList.remove("active");
    });
 
    // Close popup when clicking outside of .popup-content
    document.addEventListener("click", (event) =>
    {
-       const popup = document.querySelector(".popup-overlay");
        const popupContent = document.querySelector(".popup-content");
        if (popup.classList.contains("active") && !popupContent.contains(event.target) && !closePopup.contains(event.target))
        {
