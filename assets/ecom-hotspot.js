@@ -138,7 +138,11 @@ document.addEventListener("DOMContentLoaded", () =>
     cartButton.addEventListener("click", (event) =>
     {
         event.preventDefault();
-        
+        // get closest from and log serialize form
+        const form = activeItem.querySelector("form");
+        const formData = new FormData(form);
+
+
     });
 
 
