@@ -48,6 +48,13 @@
 				</div>
 			{% endif %}
 		{% endfor %}
+
+		{% comment %} Hidden selectbox variant {% endcomment %}
+		<select class="hidden" name="id">
+			{% for variant in product.variants %}
+				<option value="{{ variant.id }}">{{ variant.title }}</option>
+			{% endfor %}
+		</select>
 	</div>
 	<button disabled class="ecom-hotspot-button popup-item-cart-button">
 		ADD TO CART
