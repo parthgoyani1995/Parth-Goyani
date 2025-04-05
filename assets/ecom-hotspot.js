@@ -133,7 +133,28 @@ document.addEventListener("DOMContentLoaded", () =>
         });
     });
 
-    const ecomAddToCart = (selectedVariantId) =>
+    function handleSuccess(data)
+    {
+        const message = document.createElement("div");
+        message.classList.add("popup-item-cart-message");
+        message.innerText = "Item added to cart";
+        cartButton.parentNode.insertBefore(message, cartButton.nextSibling);
+        setTimeout(() =>
+        {
+            message.remove();
+        }, 3000);
+
+        const cartCount = document.querySelector(".cart-count");
+        if ( !cartCount )
+        {
+            console.error("Cart count element not found");
+            return;
+        }
+        const currentCount = parseInt(cartCount.innerText);
+        cartCount.innerText = currentCount + 1;
+    }
+
+    function ecomAddToCart (selectedVariantId)
     {
         const cartButton = document.querySelector(".popup-item-cart-button");
         cartButton.classList.remove("ecom-hidden");
@@ -151,16 +172,7 @@ document.addEventListener("DOMContentLoaded", () =>
             .then(data =>
             {
                 console.log('Success:', data);
-                // Optionally, you can show a success message or update the cart icon here.
-                const cartCount = document.querySelector(".cart-count");
-                if ( !cartCount )
-                {
-                    console.error("Cart count element not found");
-                    return;
-                }
-                const currentCount = parseInt(cartCount.innerText);
-                cartCount.innerText = currentCount + 1;
-
+                handleSuccess(data);
             })
             .catch((error) =>
             {
