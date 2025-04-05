@@ -234,8 +234,11 @@ document.addEventListener("DOMContentLoaded", () =>
             {
                 const complementaryProduct = document.querySelector(".hotspot_complementary_product");
                 const complementaryProductVariantId = complementaryProduct.dataset.variantid;
-                console.log("Complementary product variant id: ", complementaryProductVariantId);
-                ecomAddToCart(complementaryProductVariantId);
+                
+                setTimeout({
+                    ecomAddToCart(complementaryProductVariantId);
+                    console.log("Adding complementary product to cart");
+                }, 1000);
             }
 
         });
