@@ -15,6 +15,7 @@
 					<img src="{{ block.settings.hotspot_image | image_url: width: 450, height: 450, crop: 'center' }}"
 					     class="ecom-hotspot-image" alt="Hotspot image"/>
 					<span class="ecom-hotspot-icon"
+					      data-hotspotId="hotspot-popupid-{{ forloop.index }}"
 					      style=" left: {{ block.settings.hotspot_left }}%; top: {{ block.settings.hotspot_top }}%;">
 						{% render 'plus-circle-icon' %}
 					</span>
