@@ -40,21 +40,21 @@ document.addEventListener("DOMContentLoaded", () =>
     });
 
     // close popup when clicking on X
-   const closePopup = document.querySelector(".popup-close");
-   const popup = document.querySelector(".popup-overlay");
-   closePopup.addEventListener("click", () =>
-   {
-       popup.classList.remove("active");
-   });
+    const closePopup = document.querySelector(".popup-close");
+    const popup = document.querySelector(".popup-overlay");
+    closePopup.addEventListener("click", () =>
+    {
+        popup.classList.remove("active");
+    });
 
-   // Close popup when clicking outside of .popup-content
-   document.addEventListener("click", (event) =>
-   {
-       const popupContent = document.querySelector(".popup-content");
-       if (popup.classList.contains("active") && !popupContent.contains(event.target) && !closePopup.contains(event.target))
-       {
-           popup.classList.remove("active");
-       }
-   });
+    // Close popup when clicking outside of .popup-content
+    document.addEventListener("click", (event) =>
+    {
+        const popupContent = document.querySelector(".popup-content");
+        if ( popup.classList.contains("active") && !popupContent.contains(event.target) && !closePopup.contains(event.target) )
+        {
+            popup.classList.remove("active");
+        }
+    });
 
 });
