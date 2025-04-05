@@ -44,6 +44,11 @@
     z-index: 99;
 }
 
+.popup-overlay.active
+{
+    display: block;
+}
+
 .popup-content {
     background-color: #fff;
     padding: 20px;
