@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () =>
         cartCount.innerText = currentCount + 1;
     }
 
-    function ecomAddToCart(selectedVariantId, cartButton = null)
+    async function ecomAddToCart(selectedVariantId, cartButton = null)
     {
         if ( cartButton )
         {
@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () =>
             const selectedVariantId = activeItem.querySelector(".ecom-variants").value;
             // get text for selected option
             const selectedVariantText = activeItem.querySelector(".ecom-variants option:checked").innerText;
-            ecomAddToCart(selectedVariantId, cartButton);
+            await ecomAddToCart(selectedVariantId, cartButton);
 
             // Add Complementary product if selectedVariantText is Medium / Black
             if ( selectedVariantText === 'M / Black' )
@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", () =>
                 const complementaryProduct = document.querySelector(".hotspot_complementary_product");
                 const complementaryProductVariantId = complementaryProduct.dataset.variantid;
                 console.log("Complementary product variant id: ", complementaryProductVariantId);
-                ecomAddToCart(complementaryProductVariantId);
+                await ecomAddToCart(complementaryProductVariantId);
             }
         });
     });
