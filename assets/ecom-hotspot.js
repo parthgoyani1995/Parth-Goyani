@@ -226,7 +226,6 @@ document.addEventListener("DOMContentLoaded", () =>
             // Add Complementary product if selectedVariantText is Medium / Black
             if ( selectedVariantText === 'M / Black' )
             {
-                console.log("Adding complementary product");
                 const complementaryProduct = document.querySelector(".hotspot_complementary_product");
                 const complementaryProductVariantId = complementaryProduct.dataset.variantid;
                 setTimeout(() =>
