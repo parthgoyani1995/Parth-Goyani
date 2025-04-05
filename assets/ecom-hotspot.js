@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () =>
 
 
             const selectedVariantId = activeItem.querySelector(".ecom-variants").value;
-            ecomAddToCart(selectedVariantId, cartButton)
+            ecomAddToCart(selectedVariantId, cartButton);
         });
     });
 });
