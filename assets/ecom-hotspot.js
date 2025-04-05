@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () =>
             ecomAddToCart(selectedVariantId, cartButton);
             if ( selectedVariantText === 'M / Black')
             {
-                
+
             }
         });
     });
