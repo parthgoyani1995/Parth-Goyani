@@ -106,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () =>
                     const qty = parseInt(variant.dataset.qty);
                     const outOfStock = activeItem.querySelector(".popup-item-out-of-stock");
                     const cartButton = activeItem.querySelector(".popup-item-cart-button");
+                    console.log("qty", qty);
                     if ( qty === 0 )
                     {
                         outOfStock.classList.add("ecom-hidden");
