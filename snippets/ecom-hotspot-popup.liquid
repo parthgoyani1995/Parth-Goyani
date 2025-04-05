@@ -50,7 +50,7 @@
 		{% endfor %}
 
 		{% comment %} Hidden selectbox variant {% endcomment %}
-		<select class=" ecom-variants" name="id">
+		<select class="ecom-hidden ecom-variants" name="id">
 			{% for variant in product.variants %}
 				<option value="{{ variant.id }}" data-qty="{{ variant.inventory_quantity }}">{{ variant.title }}</option>
 			{% endfor %}
