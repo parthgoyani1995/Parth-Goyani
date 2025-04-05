@@ -115,7 +115,8 @@
       ],
       "settings": {
         "hotspot_container_width": 1400,
-        "title": "Tisso vison in the wild"
+        "title": "Tisso vison in the wild",
+        "hotspot__product": "dark-winter-jacket"
       }
     }
   },
