@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () =>
                 {
                     //  make ecom-variants selected
                     option.selected = true;
-                    
+
                     const qty = parseInt(option.dataset.qty);
                     const outOfStock = activeItem.querySelector(".popup-item-out-of-stock");
                     const cartButton = activeItem.querySelector(".popup-item-cart-button");
