@@ -105,13 +105,16 @@ document.addEventListener("DOMContentLoaded", () =>
                 {
                     const qty = parseInt(variant.dataset.qty);
                     const outOfStock = activeItem.querySelector(".popup-item-out-of-stock");
+                    const cartButton = activeItem.querySelector(".popup-item-cart-button");
                     if ( qty === 0 )
                     {
-                        outOfStock.classList.add("active");
+                        outOfStock.classList.add("ecom-hidden");
+                        cartButton.classList.add("ecom-hidden");
                     }
                     else
                     {
-                        outOfStock.classList.remove("active");
+                        outOfStock.classList.remove("ecom-hidden");
+                        cartButton.classList.remove("ecom-hidden");
                     }
 
                 }
