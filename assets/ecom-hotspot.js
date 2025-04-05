@@ -10,15 +10,14 @@ document.addEventListener("DOMContentLoaded", () =>
         {
             event.preventDefault();
             // get the data from the icon
-            const hotspotid = icon.dataset.hotspotid;
+            const hotspotId = icon.dataset.hotspotid;
             // remove active from all .popup-item
             const activeItems = document.querySelectorAll(".popup-item");
             activeItems.forEach(item =>
             {
                 item.classList.remove("active");
             });
-
-            const activeItem = document.querySelector("#" + hotspotid);
+            const activeItem = document.querySelector("#" + hotspotId);
             activeItem.classList.add("active");
             // Show the popup
             popup.classList.add("active");
