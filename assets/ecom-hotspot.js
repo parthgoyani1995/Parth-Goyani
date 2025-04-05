@@ -152,6 +152,10 @@ document.addEventListener("DOMContentLoaded", () =>
             {
                 console.log('Success:', data);
                 // Optionally, you can show a success message or update the cart icon here.
+                const cartCount = document.querySelector(".cart-count");
+                const currentCount = parseInt(cartCount.innerText);
+                cartCount.innerText = currentCount + 1;
+                
             })
             .catch((error) =>
             {
