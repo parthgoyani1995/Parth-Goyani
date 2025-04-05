@@ -95,14 +95,16 @@ document.addEventListener("DOMContentLoaded", () =>
         {
             // get value of .ecom-variants by matching text like 'size - color'
             const selectedVariant = selectedSize + " / " + selectedVariantColor.innerText;
+
             // match selectedVariant with options in .ecom-variants and get data-qty and value
-            const ecomVariants = activeItem.querySelectorAll(".ecom-variants option");
-            ecomVariants.forEach(variant =>
+            const options = activeItem.querySelectorAll(".ecom-variants option");
+            options.forEach(option =>
             {
-                const variantText = variant.innerText;
+                const variantText = option.innerText;
                 if ( variantText === selectedVariant )
                 {
-                    const qty = parseInt(variant.dataset.qty);
+                    option.selected = true;
+                    const qty = parseInt(option.dataset.qty);
                     const outOfStock = activeItem.querySelector(".popup-item-out-of-stock");
                     const cartButton = activeItem.querySelector(".popup-item-cart-button");
 
@@ -117,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () =>
                         cartButton.classList.remove("ecom-hidden");
                     }
 
-                    variantId = variant.value;
+                    variantId = option.value;
 
                 }
             });
