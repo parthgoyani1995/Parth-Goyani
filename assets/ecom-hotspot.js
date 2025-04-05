@@ -234,7 +234,8 @@ document.addEventListener("DOMContentLoaded", () =>
             {
                 const complementaryProduct = document.querySelector(".hotspot_complementary_product");
                 const complementaryProductVariantId = complementaryProduct.dataset.variantid;
-                setTimeout({
+                setTimeout(() =>
+                {
                     ecomAddToCart(complementaryProductVariantId);
                 }, 1000);
             }
