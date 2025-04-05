@@ -140,24 +140,7 @@ document.addEventListener("DOMContentLoaded", () =>
         button.addEventListener("click", (event) =>
         {
             event.preventDefault();
-            const activeItem = document.querySelector(".popup-item.active");
-            const selectedVariantColor = activeItem.querySelector(".popup-item-variant-color.active");
-            const selectedSize = activeItem.querySelector(".selected-value").innerText;
-            const selectedVariant = selectedSize + " / " + selectedVariantColor.innerText;
-            const ecomVariants = activeItem.querySelectorAll(".ecom-variants option");
-            ecomVariants.forEach(variant =>
-            {
-                const variantText = variant.innerText;
-                if ( variantText === selectedVariant )
-                {
-                    const qty = parseInt(variant.dataset.qty);
-                    if ( qty > 0 )
-                    {
-                        // Add to cart logic here
-                        console.log("Added to cart: " + variant.value);
-                    }
-                }
-            });
+            let variantID = getSelectedVariant();
         });
     });
 });
